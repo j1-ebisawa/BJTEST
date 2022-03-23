@@ -1,0 +1,31 @@
+      * MAC ID for QA test on each version.
+       FD  MAC-IDF.
+       01  MAC-IDR.
+           03  MAC-ID                PIC X(04).   *> seq no.
+           03  MAC-NAME              PIC X(20).   *> host name
+           03  MAC-IP                PIC X(16).   *> IP address
+           03  MAC-OS                PIC X(01).   *> 1: Win 2: UNIX 3: other
+           03  MAC-WIN-INFO.
+      *       05  MAC-OS-NAME                 PIC X(14).
+      *       05  MAC-OS-VERSION.
+      *         07  MAC-OS-MAJOR-VERSION      PIC 9(02).
+      *         07  MAC-OS-VERSION-DIV-1      PIC X(01).
+      *         07  MAC-OS-MINOR-VERSION      PIC 9(02).
+      *         07  MAC-OS-VERSION-DIV-2      PIC X(01).
+      *         07  MAC-OS-BUILD-VERSION      PIC 9(04).
+      *         07  MAC-OS-OSPLATFORM         PIC 9(03).
+      *         07  MAC-OS-SPINFO             PIC X(20).
+      *         07  FILLER                    PIC X(173).
+             05  OPERATING-SYSTEM                pic x    comp-x.
+             05  OSI-OS-VERSION                  pic x(4) comp-x.
+             05  OSI-DBCS-SUPPORT                pic x    comp-x.
+             05  OSI-CHAR-CODING                 pic x    comp-x.
+             05  OSI-COUNTRY-ID                  pic x(2) comp-x.
+             05  OSI-CODE-PAGE                   pic x(2) comp-x.
+             05  MACTY-UNAME           PIC X(19).
+      *     03  MAC-UNIX-INFO REDEFINES MAC-WIN-INFO.
+           03  MAC-UNIX-INFO.
+             05  MAC-HOSTID                  PIC X(20).
+             05  MAC-UNAME.
+               07  MAC-UOS-NAME                 PIC X(14).
+               07  MAC-UOS-REM                  PIC X(186).

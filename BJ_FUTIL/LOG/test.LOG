@@ -1,0 +1,20 @@
+BJ_JCL_001 *** BJ_JCL 開始  ***:(jcl\test.jcl)
+BJ_JCL_007 00005:\BJ_FLCNV
+BJ_JCL_004 STEP=000001----22年03月14日 : 14時43分21.38秒     開始
+BJF_PAN3_300 IF=(FN=data\INFILE\FIDX_10,ORG=I,recl=10)
+BJF_PAN3_300                                        ↑
+BJF_PAN3_333 KINF指定の誤り
+BJ_FUTIL_401 FUTIL入力ファイルエラー： 9/001
+BJ_FUTIL_404 エラーファイル名：data\INFILE\FIDX_10
+BJ_JCL_005 ---------------22年03月14日 : 14時43分21.70秒  111終了 [00:00:00.32]
+BJ_JCL_007 00016:\BJ_FLCNV
+BJ_JCL_004 STEP=000002----22年03月14日 : 14時43分21.73秒     開始
+BJ_FUTIL_004 FUTIL入力ファイル：data\OUTFL\IF_IDX_001I
+BJ_FUTIL_005 FUTIL入力件数： 0000000000
+BJ_FUTIL_006 FUTIL出力ファイル：data\OUTFL\wk_f1.txt
+BJ_FUTIL_007 FUTIL出力件数： 0000000000
+BJ_FUTIL_001 FUTIL正常終了
+BJ_JCL_005 ---------------22年03月14日 : 14時43分21.84秒 正常終了 [00:00:00.11]
+BJ_JCL_002 *** BJ_JCL 終了  ***
+BJ_JCL_006 ***** 開始時間   22年03月14日 : 14時43分21.11秒
+BJ_JCL_006 ***** 終了時間   22年03月14日 : 14時43分21.84秒        [00:00:00.73]

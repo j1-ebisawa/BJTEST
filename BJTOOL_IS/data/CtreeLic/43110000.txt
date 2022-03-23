@@ -1,0 +1,9 @@
+シリアル番号: 43110000
+製品: Batch Framework
+バージョン: 3.0.0
+ユーザー数:   1
+ＣＯＢＯＬ環境: isCOBOL
+対象ＯＳ: Windows
+使用期限: none
+プロダクトコード: FGMM NNNN NMNR NNNM GMME LLLK
+プロダクトキー:   KNNN NRNN NNNR

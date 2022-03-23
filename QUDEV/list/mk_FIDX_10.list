@@ -1,0 +1,65 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\mk_FIDX_10.cbl
+*>date generated  :  Wed Mar 23 10:56:51 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+IDENTIFICATION         DIVISION.                                 
+PROGRAM-ID. mk_FIDX_10.                               
+ENVIRONMENT            DIVISION.                                 
+CONFIGURATION          SECTION.                                  
+SOURCE-COMPUTER. PC.                                       
+OBJECT-COMPUTER. PC.                                       
+INPUT-OUTPUT           SECTION.                                  
+FILE-CONTROL.                                                    
+SELECT FSEQ            ASSIGN TO FSEQ-NAME                       
+       ORGANIZATION    SEQUENTIAL                                
+       ACCESS MODE     SEQUENTIAL                                
+       FILE STATUS     FSEQ-STS.                                 
+SELECT FIDX            ASSIGN TO FIDX-NAME                       
+       ORGANIZATION    INDEXED                                   
+       ACCESS MODE     SEQUENTIAL                                
+       RECORD KEY      FIDX-KEY                                  
+       FILE STATUS     FIDX-STS.                                 
+DATA                   DIVISION.                                 
+FILE SECTION.                                                    
+FD    FSEQ.                                                      
+01    FSEQ-REC          PIC X(10).                               
+FD    FIDX.                                                      
+01    FIDX-REC.                                                  
+      05  FIDX-KEY      PIC X(01).                               
+      05  FIDX-VAL      PIC X(09).                               
+WORKING-STORAGE SECTION.                                         
+01  W-X.                                                         
+    05  W-CNT   PIC 9(5).                                        
+01  FSEQ-NAME      PIC X(128).                                   
+01  FIDX-NAME      PIC X(128).                                   
+                                                                 
+01  FSEQ-STS       PIC XX.                                       
+01  FIDX-STS       PIC XX.                                       
+*>                                                                 
+*>*****************************************************************
+*>****     ‚o‚q‚n‚b‚d‚c‚t‚q‚d@‚c‚h‚u‚h‚r‚h‚n‚m@@****************
+*>*****************************************************************
+PROCEDURE  DIVISION.                                             
+HAJIME.                                                          
+    PERFORM MAKE-FIDX.                                           
+    accept omitted.                                              
+    goback.                                                      
+*>                                                                 
+MAKE-FIDX.                                                       
+    display "Make FIDX_10 start".                                
+    move "data\FSEQ_10"    TO FSEQ-NAME.                         
+    move "data\FIDX_10"    TO FIDX-NAME.                         
+*>                                                                 
+    OPEN INPUT  FSEQ.                                            
+    OPEN OUTPUT FIDX.                                            
+    PERFORM UNTIL 1 = 0                                          
+       READ FSEQ AT END                                          
+                 EXIT PERFORM                                    
+       END-READ                                                  
+       MOVE FSEQ-REC TO FIDX-REC                                 
+       WRITE FIDX-REC                                            
+    END-PERFORM.                                                 
+*>                                                                 
+    CLOSE FSEQ FIDX.                                             
+    display "Make FIDX_10 end".                                  

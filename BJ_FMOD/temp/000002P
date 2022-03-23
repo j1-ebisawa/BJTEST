@@ -1,0 +1,2 @@
+IF=(FN=ftest_org.txt,ORG=T,RECL=00040)
+OF=(FN=FTEST,ORG=I,RECL=00040)

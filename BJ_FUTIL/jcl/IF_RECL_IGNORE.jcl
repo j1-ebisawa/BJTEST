@@ -1,0 +1,7 @@
+#IF=IDX‚Éw’è‚³‚ê‚½RECL‚Í–³‹‚³‚ê‚é
+@PARAM
+IF=(FN=%INDATA%FIDX_10,ORG=I,RECL=5)
+OF=(FN=%OTDATA%W_TXT.txt,ORG=T,RECL=0,10)
+@PEND
+\BJ_FUTIL
+>end

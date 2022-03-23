@@ -1,0 +1,3 @@
+I --> C:\Github\BJTEST\QUDEV\source\QUCOMPLOGS.cbl
+--E: #43 Illegal condition status-code & "0000"; file = QUCOMPLOGS.cbl, line = 183, col 5
+--E: #43 Illegal condition status-code & "0000"; file = QUCOMPLOGS.cbl, line = 190, col 5

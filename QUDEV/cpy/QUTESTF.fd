@@ -1,0 +1,34 @@
+       FD  QUTESTF.
+       01 QU-REC.
+           03 QU-KEY1.
+               05 QU-TESTID         PIC  X(20).  *>Manual ID (ex. UGD)
+               05 QU-IDSEQ         PIC  9(01).  *>history(space, 1, 2, 3)
+      *(( XFD USE GROUP, DATE ))
+           03 QU-DATE.                          *>test date
+               05 QU-YYYY          PIC  9(04).
+               05 QU-MM            PIC  9(02).
+               05 QU-DD            PIC  9(02).
+           03 QU-TIME.                          *>test time
+               05 QU-HH            PIC  9(02).
+               05 QU-NN            PIC  9(02).
+               05 QU-SS            PIC  9(02).
+               05 QU-10MS          PIC  9(02).
+           03 QU-RES           PIC  X(02).      *>test result
+           03 QU-COMM1         PIC  X(40).      *>comment
+           03 QU-MACID1        PIC  X(04).      *>comment
+           03 QU-MACID2        PIC  X(04).      *>comment
+           03 QU-USER-ID       PIC  X(12).
+           03 QU-STATION-ID    PIC  X(12).
+           03  PRODUCT-VERSION.
+               05  QU-OSI-PRODUCT                     pic x(2) comp-x.
+               05  QU-OSI-PRODUCT-VERSION             pic x(2) comp-x.
+               05  QU-OSI-PRODUCT-REVISION            pic x(2) comp-x.
+               05  QU-OSI-PRODUCT-SP                  pic x(2) comp-x.
+               05  QU-OSI-FIXPACK                     pic x(2) comp-x.
+           03 QU-RUNTIME-BYTE  PIC  9.
+           03 QU-USER          PIC  X(14).
+           03 QU-LOGNAME       PIC  X(14).
+           03 QU-SSH-CLIENT    PIC  X(50).
+           03 QU-SSH-CONNECT   PIC  X(60).
+           03 QU-LANG          PIC  X(20).
+           03 QU-PWD           PIC  X(50).

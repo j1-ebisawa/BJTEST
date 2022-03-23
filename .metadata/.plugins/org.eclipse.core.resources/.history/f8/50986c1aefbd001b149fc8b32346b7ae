@@ -1,0 +1,10 @@
+           identification division.
+           program-id. JCL10010030013.
+           file-control.
+           data division.
+           01  display-text   pic x(256).
+           procedure division.
+           comp-proc.
+                move "HELLO WORLD!" to display-text.
+                display display-text.
+

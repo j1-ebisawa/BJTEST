@@ -1,0 +1,9 @@
+@display 'Test start'
+>P001
+\SYSTEM CMD.EXE /c iscrun PROG004
+@display 'Test end'
+@SET QUTESTID  'SYSTEM_PGM_001'
+@SET QUFNAME1  '%OLOG%&QUTESTID&.log'
+@SET QUFNAME2  '%CLOG%&QUTESTID&.log'
+\QUCOMPLOG 0002:0004 0007:0007
+@end

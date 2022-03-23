@@ -1,0 +1,12 @@
+      * MAC TYPE for QA test on each version.
+       FD  MAC-TYF.
+       01  MAC-TYR.
+           03  MACTY-ID              PIC X(03).   *> seq no.
+           03  MACTY-ALT.
+             05  OPERATING-SYSTEM                pic x    comp-x.
+             05  OSI-OS-VERSION                  pic x(4) comp-x.
+             05  OSI-DBCS-SUPPORT                pic x    comp-x.
+             05  OSI-CHAR-CODING                 pic x    comp-x.
+             05  OSI-COUNTRY-ID                  pic x(2) comp-x.
+             05  OSI-CODE-PAGE                   pic x(2) comp-x.
+             05  MACTY-UNAME           PIC X(19).

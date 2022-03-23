@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="IscobolConfigurationType">
+    <stringAttribute key="arguments" value=""/>
+    <stringAttribute key="outdir" value="C:/AJTEST/AJ_MENU/output"/>
+    <stringAttribute key="process_factory_id" value="com.iscobol.plugins.processFactory"/>
+    <stringAttribute key="progname" value="BAT001"/>
+    <stringAttribute key="projectname" value="AJ_MENU"/>
+    <stringAttribute key="systemprops" value="-XX:ErrorFile=../logs/java_error%p.log"/>
+    <booleanAttribute key="utilityprop" value="false"/>
+    <booleanAttribute key="wd2" value="false"/>
+    <stringAttribute key="workdir" value="output"/>
+</launchConfiguration>

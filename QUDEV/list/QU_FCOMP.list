@@ -1,0 +1,454 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\QU_FCOMP.cbl
+*>date generated  :  Wed Mar 23 10:56:46 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+identification division. 
+program-id. QU_FCOMP. 
+environment              division. 
+configuration            section. 
+>>PAGE 
+data                     division. 
+>>PAGE 
+working-storage          section. 
+*>copy "BJ_fc78.cpy". 
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FC78.CPY
+*>--  AcuTECH Japan File Utility  --------------------------------------*
+*>       Constant define area                                           *
+*>----------------------------------------------------------------------*
+*>***********************
+*> LIMITATION  CONSTANT *
+*>***********************
+ 78  bjf-max-io-buf-size        value 4096. 
+ 78  bjf-max-rec-buf-size       value 32767. 
+ 78  bjf-max-sort-key-num       value 50.   
+ 78  bjf-max-out-edit-num       value 100.  
+ 78  bjf-max-select-num         value 300.  
+ 78  bjf-max-select-multi       value 200.  
+ 78  bjf-max-outsel-kosu        value 50.   
+ 78  bjf-max-sum-num            value 200.  
+ 78  bjf-max-const-num          value 360.  
+ 78  bjf-max-keys               value 120. 
+ 78  bjf-max-segs               value 6. 
+ 78  bjf-max-inf-kosu           value 30.  
+ 78  bjf-max-otf-kosu           value 30. 
+ 78  bjf-max-slcpf-num          value 50. 
+ 78  bjf-max-slcpftbl-num       value 50. 
+
+*>********************
+*> FILE ORGANIZATION *
+*>********************
+ 78  bjf-file-org-seq           value 1. 
+ 78  bjf-file-org-txt           value 2. 
+ 78  bjf-file-org-rel           value 3. 
+ 78  bjf-file-org-idx           value 4. 
+
+*>**************
+*> IO FUNCTION *
+*>**************
+ 78  bjf-open-func              value 1. 
+ 78  bjf-close-func             value 2. 
+ 78  bjf-make-func              value 3. 
+ 78  bjf-next-func              value 6. 
+ 78  bjf-write-func             value 9. 
+ 78  bjf-rewrite-func           value 10. 
+
+*>*****************
+*> FILE OPEN MODE *
+*>*****************
+ 78  bjf-file-input             value 0. 
+ 78  bjf-file-output            value 1. 
+ 78  bjf-file-extend            value 3. 
+ 78  bjf-file-io                value 2. 
+
+*>*******************
+*> Select Condition *
+*>*******************
+ 78  bjf-condition-eq           value  0. 
+ 78  bjf-condition-ge           value  1. 
+ 78  bjf-condition-gt           value  2. 
+ 78  bjf-condition-lt           value  3. 
+ 78  bjf-condition-le           value  4. 
+ 78  bjf-condition-ne           value  5. 
+
+*>--  End of Constant define area  -------------------------------------*
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FC78.CPY
+
+*>copy "BJ_finfo.cpy" replacing =='BJf'== by ==bjf-f1==. 
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>--  isTECH Japan File Utility   --------------------------------------*
+*>       File information area                                          *
+*>--------------------------------------------------------  22.03.03  --*
+ 01  BJF-F1-file-info. 
+     03 BJF-F1-file-org                  pic 9. 
+     03 BJF-F1-file-disp-lock            pic 9. 
+     03 BJF-F1-file-disp-addrep          pic 9. *>1:add 2:rep
+     03 BJF-F1-file-disp-dlt             pic 9.   
+     03 BJF-F1-file-disp-rotate          pic 9. 
+     03 BJF-F1-file-name-rdb             pic 9. 
+     03 BJF-F1-file-inf-filler           pic x(2). 
+     03 BJF-F1-file-opmode               pic x(02) comp-x. 
+     03 BJF-F1-file-sts                  pic x(02). 
+     03 BJF-F1-max-rec-size              pic x(02) comp-x. 
+     03 BJF-F1-min-rec-size              pic x(02) comp-x. 
+     03 BJF-F1-key-info-ptr              pointer.  
+     03 BJF-F1-rel-key                   pic x(04) comp-x. 
+     03 BJF-F1-file-name                 pic x(256). 
+     03 BJF-F1-index-file-handle         handle.  
+
+*>--  End of File information area  ------------------------------------*
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>copy "BJ_finfo.cpy" replacing =='BJf'== by ==bjf-f2==. 
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>--  isTECH Japan File Utility   --------------------------------------*
+*>       File information area                                          *
+*>--------------------------------------------------------  22.03.03  --*
+ 01  BJF-F2-file-info. 
+     03 BJF-F2-file-org                  pic 9. 
+     03 BJF-F2-file-disp-lock            pic 9. 
+     03 BJF-F2-file-disp-addrep          pic 9. *>1:add 2:rep
+     03 BJF-F2-file-disp-dlt             pic 9.   
+     03 BJF-F2-file-disp-rotate          pic 9. 
+     03 BJF-F2-file-name-rdb             pic 9. 
+     03 BJF-F2-file-inf-filler           pic x(2). 
+     03 BJF-F2-file-opmode               pic x(02) comp-x. 
+     03 BJF-F2-file-sts                  pic x(02). 
+     03 BJF-F2-max-rec-size              pic x(02) comp-x. 
+     03 BJF-F2-min-rec-size              pic x(02) comp-x. 
+     03 BJF-F2-key-info-ptr              pointer.  
+     03 BJF-F2-rel-key                   pic x(04) comp-x. 
+     03 BJF-F2-file-name                 pic x(256). 
+     03 BJF-F2-index-file-handle         handle.  
+
+*>--  End of File information area  ------------------------------------*
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>copy "BJ_frec.cpy"  replacing =='BJf'== by ==bjf-f1==. 
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+*>--   isTECH Japan File Utility  --------------------------------------*
+*>       Record information area                                        *
+*>--------------------------------------------------------  22.03.03  --*
+ 01  BJF-F1-record-info. 
+     03 BJF-F1-record-size               pic x(02) comp-x. 
+     03 BJF-F1-record-buffer             pic x(BJf-max-rec-buf-size). 
+
+*>--  End of Record information area  ----------------------------------*
+
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+*>copy "BJ_frec.cpy"  replacing =='BJf'== by ==bjf-f2==. 
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+*>--   isTECH Japan File Utility  --------------------------------------*
+*>       Record information area                                        *
+*>--------------------------------------------------------  22.03.03  --*
+ 01  BJF-F2-record-info. 
+     03 BJF-F2-record-size               pic x(02) comp-x. 
+     03 BJF-F2-record-buffer             pic x(BJf-max-rec-buf-size). 
+
+*>--  End of Record information area  ----------------------------------*
+
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+ 01  bjf-f1-file-handle              pointer. 
+ 01  bjf-f2-file-handle              pointer. 
+ 01  bjf-f1-record-ptr               pointer. 
+ 01  bjf-f2-record-ptr               pointer. 
+ 01  bjf-io-function                 pic 9(02) comp-x. 
+*>copy "QUTESTID.lks". 
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+*>>                                                                
+01 QUL-PROC-ID      PIC  X(03). *>INT,WRT,TRM                   
+*>>                                                                
+01 QUL-PARAM-ID     PIC  X(20). *>test ID                      
+*>>                                                                
+01 QUL-RES          PIC  X(02).                                  
+*>>                                                                
+01 QUL-COMM1        PIC  X(40).                                  
+*>>                                                                
+01 QUL-RETURNCD     PIC  S9(05). *>OK:0, 1-99:warning, 100-:erro
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+*>******** WORK-DATA **********
+01  check-result             pic X(5). 
+01  f1-cnt                   pic 9(10). 
+01  f2-cnt                   pic 9(10). 
+01  wk-L                     pic 9(06).  
+*>********disp-message************************
+01    disp-msg               pic x(256).  
+01    disp-msg-l             pic 999. 
+*>----エラーコード領域              
+ 01    FL--STS      PIC X(7).      
+ 01    FL--STS-R.                  
+   03  FL--STS-N    PIC X(2).      
+   03  FL--STS-E    PIC X(5).      
+*>----エラーメッセージ領域          
+ 01    FL--TEXT     PIC X(80).     
+LINKAGE SECTION. 
+*>copy "BJ_finfo.cpy" replacing =='BJf'== by ==bjf-wk==. 
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>--  isTECH Japan File Utility   --------------------------------------*
+*>       File information area                                          *
+*>--------------------------------------------------------  22.03.03  --*
+ 01  BJF-WK-file-info. 
+     03 BJF-WK-file-org                  pic 9. 
+     03 BJF-WK-file-disp-lock            pic 9. 
+     03 BJF-WK-file-disp-addrep          pic 9. *>1:add 2:rep
+     03 BJF-WK-file-disp-dlt             pic 9.   
+     03 BJF-WK-file-disp-rotate          pic 9. 
+     03 BJF-WK-file-name-rdb             pic 9. 
+     03 BJF-WK-file-inf-filler           pic x(2). 
+     03 BJF-WK-file-opmode               pic x(02) comp-x. 
+     03 BJF-WK-file-sts                  pic x(02). 
+     03 BJF-WK-max-rec-size              pic x(02) comp-x. 
+     03 BJF-WK-min-rec-size              pic x(02) comp-x. 
+     03 BJF-WK-key-info-ptr              pointer.  
+     03 BJF-WK-rel-key                   pic x(04) comp-x. 
+     03 BJF-WK-file-name                 pic x(256). 
+     03 BJF-WK-index-file-handle         handle.  
+
+*>--  End of File information area  ------------------------------------*
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+>>PAGE 
+procedure  division. 
+prog-start. 
+     perform init-prc. 
+     perform compare-prc. 
+     perform end-proc. 
+prog-end. 
+     goback. 
+
+*>**********************
+init-prc section. 
+*>**********************
+init-prc-01. 
+     move space to disp-msg. 
+     move space to check-result. 
+     set bjf-f1-file-handle to address of bjf-f1-file-info. 
+     set bjf-f2-file-handle to address of bjf-f2-file-info. 
+     set bjf-f1-record-ptr  to address of bjf-f1-record-info.. 
+     set bjf-f2-record-ptr  to address of bjf-f2-record-info.. 
+
+*>
+     call "QU_PAN3" using BJf-f1-file-info
+                          BJf-f2-file-info
+     
+     if return-code = -1   go to abort-goback. 
+           move space to QUL-PARAM-ID. 
+     display "QUTESTID"      upon environment-name. 
+     accept QUL-PARAM-ID     from environment-value. 
+
+*>**********************
+end-proc section. 
+*>**********************
+end-prc-01. 
+    if check-result = space
+       move "OK!!" to check-result
+       move "OK"   to QUL-RES
+    else
+       move "NG"   to QUL-RES
+    end-if. 
+    move 1 to disp-msg-l. 
+    string "QU_FCOMP : "   delimited by size
+           check-result    delimited by space
+           into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY" using disp-msg(1:disp-msg-l). 
+*>*
+    CALL "QUTESTID" USING "INT"
+    CALL "QUTESTID" USING "WRT" 
+             QUL-PARAM-ID QUL-RES QUL-COMM1 QUL-RETURNCD. 
+    CALL "QUTESTID" USING "TRM". 
+
+*>**********************
+compare-prc section. 
+*>**********************
+     perform f1-file-open-prc
+     perform f2-file-open-prc. 
+     
+     perform f1-read-prc. 
+     perform f2-read-prc. 
+     perform until bjf-f1-file-sts = "10" and
+                   bjf-f2-file-sts = "10"
+        if   bjf-f1-file-sts not = "00" or
+             bjf-f2-file-sts not = "00"
+                perform disp-unmatch1
+                exit perform
+        end-if
+        if  bjf-f1-record-size not = bjf-f2-record-size
+                perform disp-unmatch3
+                exit perform
+        end-if
+        if  bjf-f1-record-buffer(1:bjf-f1-record-size) not =
+            bjf-f2-record-buffer(1:bjf-f2-record-size)
+                perform disp-unmatch2
+                exit perform
+        end-if
+        perform f1-read-prc
+        perform f2-read-prc
+     end-perform
+     perform f1-file-close-prc
+     perform f2-file-close-prc. 
+*>**********************
+f1-file-open-prc section. 
+*>**********************
+     move bjf-open-func   to    bjf-io-function. 
+     move bjf-file-input  to    bjf-f1-file-opmode. 
+     call "BJF_IO"        using bjf-io-function
+                                bjf-f1-file-handle
+                                bjf-f1-record-ptr. 
+     if   return-code = -1   go to abort-goback.  
+     if   bjf-f1-file-sts not = "00"
+          perform disp-f1-error
+     end-if. 
+     move 0 to f1-cnt. 
+*>**********************
+f2-file-open-prc section. 
+*>**********************
+     move bjf-open-func   to    bjf-io-function
+     move bjf-file-input  to    bjf-f2-file-opmode. 
+     call "BJF_IO"        using bjf-io-function
+                                bjf-f2-file-handle
+                                bjf-f2-record-ptr
+     if   return-code = -1   go to abort-goback. 
+     if   bjf-f2-file-sts not = "00"
+            perform disp-f2-error
+     end-if. 
+     move 0 to f2-cnt. 
+*>**********************
+f1-read-prc section. 
+*>**********************
+    move 0     to        bjf-f1-record-size. 
+    move space to        bjf-f1-record-buffer. 
+    move bjf-next-func   to    bjf-io-function. 
+    call "BJF_IO"        using bjf-io-function
+                               bjf-f1-file-handle
+                               bjf-f1-record-ptr. 
+    if   return-code = -1   go to abort-goback. 
+    evaluate bjf-f1-file-sts
+     when "00"
+        add 1 to f1-cnt
+     when "10"
+        continue
+     when other
+        perform disp-f1-error
+    end-evaluate. 
+
+*>**********************
+f2-read-prc section. 
+*>**********************
+    move bjf-next-func   to    bjf-io-function
+    call "BJF_IO"   using bjf-io-function
+                          bjf-f2-file-handle
+                          bjf-f2-record-ptr. 
+    if   return-code = -1   go to abort-goback. 
+    evaluate bjf-f2-file-sts
+     when "00"
+        add 1 to f2-cnt
+     when "10"
+        continue
+     when other
+        perform disp-f2-error
+    end-evaluate. 
+
+*>**********************
+f1-file-close-prc section. 
+*>**********************
+     move bjf-close-func    to    bjf-io-function. 
+     call "BJF_IO"          using bjf-io-function
+                                  bjf-f1-file-handle
+                                  bjf-f1-record-ptr. 
+*>**********************
+f2-file-close-prc section. 
+*>**********************
+     move bjf-close-func    to    bjf-io-function
+     call "BJF_IO"          using bjf-io-function
+                                  bjf-f2-file-handle
+                                  bjf-f2-record-ptr. 
+
+*>*************************
+error-proc section. 
+*>*************************
+disp-f1-error. 
+     CALL "C$RERR" USING   FL--STS, FL--TEXT , 1 .  
+     if  fl--sts   = "0000"                         
+         move   bjf-f1-file-sts    to  FL--STS(1:2) 
+     end-if                                         
+     move space to disp-msg 
+     move 1 to disp-msg-l.                                                            
+     string "F1-file-ERROR : "        delimited by size   
+           bjf-f1-file-sts            delimited by size   
+           " "                        delimited by size   
+           bjf-f1-file-name           delimited by space  
+           into disp-msg with pointer disp-msg-l.            
+     call "BJ_DISPLAY" using disp-msg(1:disp-msg-l). 
+     go to abort-goback.                    
+     
+disp-f2-error. 
+     CALL "C$RERR" USING   FL--STS, FL--TEXT , 1 .  
+     if  fl--sts   = "0000"                         
+         move   bjf-f2-file-sts    to  FL--STS(1:2) 
+     end-if
+     move space to disp-msg . 
+     move 1 to disp-msg-l.                         
+     string "F2-FILE-ERROR : "        delimited by size 
+           bjf-f2-file-sts            delimited by size 
+           bjf-f2-file-name           delimited by space 
+           into disp-msg with pointer disp-msg-l. 
+     call "BJ_DISPLAY" using disp-msg(1:disp-msg-l). 
+     go to abort-goback. 
+ disp-unmatch1. 
+    move 1 to disp-msg-l. 
+    string "レコード数不一致："             delimited by size
+           "f1-cnt="                   delimited by size
+            f1-cnt                     delimited by size
+           "  f2-cnt="                 delimited by size
+            f2-cnt                     delimited by size
+           into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY"  using disp-msg(1:disp-msg-l). 
+    MOVE "NG!!"    to check-result. 
+ 
+ disp-unmatch2. 
+    string "レコード内容不一致："      delimited by size
+           into disp-msg. 
+    call "BJ_DISPLAY"  using disp-msg(1:20). 
+    move 1 to disp-msg-l.       
+    string "f1="                       delimited by size
+            bjf-f1-record-buffer(1:bjf-f1-record-size)
+                                       delimited by size
+            into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY"  using disp-msg(1:disp-msg-l). 
+    move 1 to disp-msg-l.        
+    string "f2="                       delimited by size
+            bjf-f2-record-buffer(1:bjf-f2-record-size)
+                                       delimited by size
+           into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY"  using disp-msg(1:disp-msg-l). 
+    move "NG!!"    to check-result. 
+ disp-unmatch3. 
+    string "レコード長不一致："      delimited by size
+           into disp-msg. 
+    call "BJ_DISPLAY"  using disp-msg(1:20). 
+    move bjf-f1-record-size to wk-L. 
+    move 1 to disp-msg-l.       
+    string "f1-recl="                  delimited by size
+           wk-L                        delimited by size
+           into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY"  using disp-msg(1:disp-msg-l). 
+    move 1 to disp-msg-l. 
+    string "f1-rec="                   delimited by size       
+            bjf-f1-record-buffer(1:bjf-f1-record-size)
+                                       delimited by size
+            into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY"  using disp-msg(1:disp-msg-l). 
+    move bjf-f2-record-size to wk-L. 
+    move 1 to disp-msg-l.       
+    string "f2-recl="                  delimited by size
+           wk-L                        delimited by size
+           into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY"  using disp-msg(1:disp-msg-l). 
+    move 1 to disp-msg-l.        
+    string "f2-rec="                   delimited by size
+            bjf-f2-record-buffer(1:bjf-f2-record-size)
+                                       delimited by size
+           into disp-msg with pointer disp-msg-l. 
+    call "BJ_DISPLAY"  using disp-msg(1:disp-msg-l). 
+    move "NG!!"    to check-result. 
+     
+abort-goback. 
+     move -1 to return-code, 
+     goback. 

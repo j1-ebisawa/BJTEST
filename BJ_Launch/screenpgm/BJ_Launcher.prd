@@ -1,0 +1,79 @@
+      *BJ_Launcher.prd is generated from C:\BJTEST\BJ_Launcher\screen\BJ_Launcher.isp
+       is-initial-routine.
+           accept system-information from system-info.
+           accept terminal-abilities from terminal-info.
+       is-exit-rtn.
+           exit program.
+           stop run.
+       is-screen-1-routine.
+           perform is-screen-1-scrn
+           perform is-screen-1-proc.
+       is-screen-1-scrn.
+           perform is-screen-1-create
+           perform is-screen-1-init-data.
+       is-screen-1-create.
+           display standard window background-low
+              screen line 41
+              screen column 91
+              size 91.6
+              lines 64.0
+              cell width 10
+              cell height 10
+              label-offset 20
+              color 257
+              modeless
+              title-bar
+              no wrap
+              title "Screen"
+              handle window-handle
+           .
+           display screen-1.
+       is-screen-1-init-data.
+           perform is-screen-1-gr-1-content.
+       is-screen-1-gr-1-content.
+           modify screen-1-gr-1
+              column-dividers ( 1 1 )
+              data-columns ( 1 9 )
+              display-columns ( 1 6 )
+              separation ( 5 5 )
+              alignment ( "U" "U" )
+              data-types ( "9" "X" )
+           .
+           modify screen-1-gr-1 x = 1
+              column-protection 1
+           .
+           modify screen-1-gr-1 x = 2
+              column-protection 1
+           .
+       is-screen-1-proc.
+           perform until exit-pushed
+              accept screen-1 on exception 
+                 perform is-screen-1-evaluate-func
+              end-accept
+           end-perform.
+           destroy window-handle.
+           initialize key-status.
+       is-screen-1-evaluate-func.
+           evaluate true
+           when exit-pushed
+              perform is-screen-1-exit
+           when event-occurred
+              if event-type = msg-close
+                 perform is-screen-1-exit
+              end-if
+           when key-status = 1
+              perform screen-1-pb-1-link-to
+           when key-status = 5
+              perform screen-1-pb-2-link-to
+           when key-status = 6
+              perform screen-1-pb-3-link-to
+           when key-status = 7
+              perform screen-1-pb-4-link-to
+           when key-status = 8
+              perform screen-1-pb-5-link-to
+           when key-status = 2
+              perform screen-1-pb-6-link-to
+           end-evaluate.
+           move 1 to accept-control.
+       is-screen-1-exit.
+           set exit-pushed to true.

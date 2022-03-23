@@ -1,0 +1,12 @@
+#CATALG FILE PRINT
+@param
+IF=(FN=data\CATLG-MAST,ORG=I)
+OF=(FN=%OTDATA%CATLG-MAST-PRT.txt,ORG=T,RECL=0,50)
+@pend
+\BJ_FUTIL
+@param
+IF=(FN=temp\_CATLG.dat,ORG=I)
+OF=(FN=%OTDATA%CATLG-TMP-PRT.txt,ORG=T,RECL=0,50)
+@pend
+\BJ_FUTIL
+@end

@@ -1,0 +1,16 @@
+      *BJ_Launcher.wrk is generated from C:\BJTEST\BJ_Launcher\screen\BJ_Launcher.isp
+       77 key-status is special-names crt status pic 9(4) value 0.
+          88 exit-pushed value 27.
+          88 message-received value 95.
+          88 event-occurred value 96.
+          88 screen-no-input-field value 97.
+          88 screen-time-out value 99.
+       77 quit-mode-flag pic s9(5) comp-4 value 0.
+       77 window-handle handle of window.
+       77 screen-1-ef-1-val pic x(10).
+       77 screen-1-ef-6-val pic x(10).
+       77 screen-1-ef-2-val pic x(10).
+       77 screen-1-ef-3-val pic x(10).
+       77 screen-1-ef-4-val pic x(10).
+       77 screen-1-ef-5-val pic x(10).
+       77 screen-1-ef-7-val pic x(10).

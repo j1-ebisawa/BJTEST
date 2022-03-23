@@ -1,0 +1,15 @@
+TITLE                         MENU02ƒeƒXƒg
+FTEST_GUI                     FTEST_GUI
+Batch  prog(PRG001)           PRG001
+Batch  JCL                    BJ_JCL jcl\BAT_PRG_001.jcl
+BATCH  SORT                   BJ_JCL jcl\SORT_KEY1_S.jcl
+BATCH  FLCV                   BJ_JCL jcl\FLCV_INC_AND_AND.jcl
+
+menu03                        BJ_MENUG menu\MENUG_03.txt
+
+P3_Norm_01                    BJ_JCL Jcl\P3_Norm_01.jcl
+P3_Norm_02                    BJ_JCL Jcl\P3_Norm_02.jcl
+P3_Norm_03                    BJ_JCL Jcl\P3_Norm_03.jcl
+P3_Norm_04                    BJ_JCL Jcl\P3_Norm_04.jcl
+P3_Norm_05                    BJ_JCL Jcl\P3_Norm_05.jcl
+P3_Norm_06                    BJ_JCL Jcl\P3_Norm_06.jcl

@@ -1,0 +1,36 @@
+      * QUTESTID.wrk
+      * user-defined variable
+       01 FILE-STS         PIC  X(02).
+       01 LAST-OK          PIC  9(01).
+      *’¼‘O•Û‘¶
+       01 PRE-SAVE         PIC  X(500).
+      *”jŠü•Û‘¶
+       01 PRE3-SAVE        PIC  X(500).
+       78 ERR-OK-NG VALUE IS 111. 
+       78 ERR-PLFM VALUE  IS 112. 
+       78 WRN-OK-NG VALUE IS 11. 
+       78 LF VALUE IS X"0A". 
+       01 MAC1
+                  VALUE IS " ".
+           03 MACID1           PIC  X(04).
+           03 MACTYPE1         PIC  X(03).
+       01 MAC2
+                  VALUE IS " ".
+           03 MACID2           PIC  X(04).
+           03 MACTYPE2         PIC  X(03).
+       01 MSG-RES          PIC  9.
+       01 MSG-TITLE        PIC  X(80).
+       01 MSG-LINE1        PIC  X(80).
+       01 MSG-TYPE         PIC  9(01).
+       01 MSG-ICON         PIC  9(01).
+       01 MSG-DEFAULT      PIC  9(01).
+       01 RES              PIC  X(01).
+       01 CALLING-PROGRAM  PIC  X(32).
+       01 CALL-STATUS      PIC  S99.
+       01 COM-LEN          PIC  9(04).
+       01 WRK-93           PIC  9(03).
+       01 WRK-93X REDEFINES WRK-93    PIC  X(03).
+       01 INV-FLG          PIC  X.
+           88 START-INV VALUE IS "1".      *>START INVALID
+           88 START-NOT-INV VALUE IS "2".  *>START NOT INVALID
+       01  WRK-PTR         USAGE POINTER.

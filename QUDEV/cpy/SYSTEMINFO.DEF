@@ -1,0 +1,46 @@
+*************************************
+ 01  system-information.
+    03  operating-system                         pic x(10).
+        88  os-is-msdos                          value "ms-dos".
+        88  os-is-os2                            value "OS/2".
+        88  os-is-vms                            values "vms", "vax/vms".
+        88  os-is-unix                           value "Linux", "AIX", "HP-UX", "SunOS", "Solaris".
+        88  os-is-linux                          value "Linux".
+        88  os-is-aos                            value "aos/vs".
+        88  os-is-windows                        values "Windows 95", "Windows 98", "Windows Me".
+        88  os-is-win-nt                         values "Windows 20", "Windows XP", "Windows Vi", "Windows 7", "WINDOWS", "Windows Se", "Windows 8", "Windows 8.", "Windows 10".
+        88  os-is-win-family                     values "Windows 95", "Windows 98", "Windows Me", "Windows 20", "Windows XP", "Windows Vi", "WINDOWS", "Windows 7", "Windows Se", "Windows 8", "Windows 8.", "Windows 10".
+        88  os-is-amos                           value "amos".
+        88  os-is-mpe                            value "MPE/iX".
+        88  os-is-mpeix                          value "MPE/iX".
+        88  os-is-mac                            value "Mac OS", "Mac OS X".
+    03  user-id                                  pic x(12).
+    03  station-id                               pic x(12).
+    03  filler                                   pic x.
+        88  has-indexed-read-previous            value "Y".
+    03  filler                                   pic x.
+        88  has-relative-read-previous           value "Y".
+    03  filler                                   pic x.
+        88  can-test-input-status                value "Y".
+    03  filler                                   pic x.
+        88  is-multi-tasking                     value "Y".
+    03  runtime-version.
+        05  runtime-major-version                pic 99.
+        05  runtime-minor-version                pic 99.
+        05  runtime-release                      pic 99.
+    03  filler                                   pic x.
+        88  is-plugin                            value "Y".
+    03  serial-number                            pic x(20).
+    03  filler                                   pic x.
+        88  has-large-file-support               value "Y".
+    03  filler                                   pic x.
+    03  filler                                   pic x.
+        88  is-64-bit                            value "Y".
+78  BLACK                               VALUE 1. *>1.
+78  BLUE                                VALUE 2. *>2.
+78  GREEN                               VALUE 3. *>3.
+78  CYAN                                VALUE 4. *>4.
+78  RED                                 VALUE 5. *>5.
+78  MAGENTA                             VALUE 6. *>6.
+78  BROWN                               VALUE 7. *>7.
+78  WHITE                               VALUE 8. *>8.

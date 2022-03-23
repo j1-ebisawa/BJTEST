@@ -1,0 +1,79 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PR_FSEQ_40.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SOURCE-COMPUTER.  PC.
+       OBJECT-COMPUTER.  PC.
+       INPUT-OUTPUT    SECTION.
+       FILE-CONTROL.
+       SELECT   A-FILE   ASSIGN TO external INFILE
+                         FILE STATUS INF-STS.
+       
+       select   P-file   assign TO external PRFILE
+                organization line sequential.
+       DATA DIVISION.
+       FILE SECTION.
+       FD  A-FILE.
+       01  A-REC.
+         05  P-KEY   PIC 9(03).                *> 1:3 ZD
+         05  A-KEY   PIC  X(2).                *> 4:2 CH
+         05  filler  PIC  X(1).
+         05  A-1     PIC  S9(5).               *> 7:5 ZD
+         05  filler  PIC  X(1).
+         05  A-2     PIC  S9(4)      COMP.     *>13:2 BIN
+         05  filler  PIC  X(1).
+         05  A-3     PIC  S9(8)      COMP.     *>16:4 BIN
+         05  filler  PIC  X(1).
+         05  A-4     PIC  S9(5)V9(3) COMP-3.   *>21:5 PACK
+         05  filler  PIC  X(1).
+         05  A-5                     float.    *>27:4 FLOAT
+         05  filler  PIC  X(1). 
+         05  A-6                     double.   *>32:8 DOUBLE
+         05  filler  PIC  X(1). 
+       FD P-file.
+       01 P-rec.
+         05  P-KEY   PIC  9(3).                
+         05  A-KEY   PIC  X(2).                
+         05  filler  PIC  X(1).
+         05  A-1     PIC -9(5).                
+         05  filler  PIC  X(1).
+         05  A-2     PIC -9(4) .               
+         05  filler  PIC  X(1).
+         05  A-3     PIC -9(8).                
+         05  filler  PIC  X(1).
+         05  A-4     PIC -9(5).999.            
+         05  filler  PIC  X(1).
+         05  A-5     PIC  -9(5).9(4).          
+         05  filler  PIC  X(1). 
+         05  A-6     PIC  -9(5).9(4).          
+         05  filler  PIC  X(1). 
+
+       WORKING-STORAGE SECTION.
+       01  W-01      PIC S9(5).
+       01  W-02      PIC S9(5).
+       01  W-03      PIC S9(5).
+       01  W-INT     PIC S9(8) BINARY VALUE 1.
+       01  INF-STS   PIC X(02).
+       PROCEDURE DIVISION.
+       MAIN SECTION.
+        P-01. 
+           display "Print FSEQ_40 start".
+             open output P-file.
+             open input A-FILE.
+             if INF-STS NOT = "00"
+                go to P-02
+             end-if.
+             perform until 1 = 0
+                move space to A-REC
+                read A-FILE at end 
+                            exit perform
+                end-read
+                move space to P-rec
+                move corr A-rec to P-rec
+                write P-rec
+             end-perform.
+             close A-FILE.
+        P-02.
+             close P-file.
+           display "Print FSEQ_40 end".
+             goback.

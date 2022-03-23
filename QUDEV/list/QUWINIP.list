@@ -1,0 +1,53 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\QUWINIP.cbl
+*>date generated  :  Wed Mar 23 10:56:46 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>*****************************************************************
+IDENTIFICATION              DIVISION.                            
+*>*****************************************************************
+PROGRAM-ID. QUWINIP.                             
+*> REMARKS.                                                        
+*>     IP address 取得（Windows用）                                
+SPECIAL-NAMES.                                                   
+    call-convention 74 is winapi.                                
+*>*****************************************************************
+DATA                        DIVISION.                            
+*>*****************************************************************
+WORKING-STORAGE             SECTION.                             
+                                                                 
+01  HOSTENT-P       POINTER.                                     
+01  IP-P            POINTER.                                     
+01  CNT             PIC S9(4) COMP.                              
+01  RET                 BINARY-LONG SIGNED.                      
+01  RES             PIC S9(9) COMP-5.                            
+78  MAX-ADDR   VALUE 16.                                         
+01  FUNC-NAME               PIC X(30).                           
+01  myptr                   PROCEDURE-POINTER.                   
+*>    COPY "QUEXT.def".                                            
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUEXT.def
+*>  Ver test 用 EXTERNAL                                           
+01  QUEXT   EXTERNAL.                                            
+    03  QU-KERNEL             PIC X(20).                         
+    03  QU-WS2-32             PIC X(20).                         
+    03  QU-T-KERNEL           PIC X(30).                         
+    03  QU-T-WS2-32           PIC X(30).                         
+    03  QU-DISP-H             PIC X(20).                         
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUEXT.def
+LINKAGE                     SECTION.                             
+01  HOSTNAME        PIC X(20).                                   
+01  IP-ADR          PIC X(16).                                   
+01  THIN-FLG                PIC X.                               
+01  HOSTENT.                                                     
+    03  H_NAME      POINTER. *> char FAR*                  
+    03  H_ALIASES   POINTER. *> char FAR  FAR**            
+    03  H_ADDRTYPE  BINARY-SHORT SIGNED. *>                     
+    03  H_LENGTH    BINARY-SHORT SIGNED. *>                     
+    03  H_ADDR_LIST POINTER. *> char FAR  FAR**            
+01  H_ADDR_LIST_0   POINTER.                                     
+01  H_ADDR_0        PIC X(4).                                    
+01  IP-CHR          PIC X(MAX-ADDR).                             
+*>*****************************************************************
+PROCEDURE                   DIVISION USING                       
+                              HOSTNAME IP-ADR THIN-FLG.          
+*> --S: #31 Expected/found token mismatch: PROCEDURE/SPECIAL-NAMES; file = QUWINIP.cbl, line = 7

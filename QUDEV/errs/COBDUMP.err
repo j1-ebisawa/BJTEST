@@ -1,0 +1,4 @@
+I --> C:\Github\BJTEST\QUDEV\source\COBDUMP.cbl
+--E: #188 Period missing. Period Assumed. '.'; file = COBDUMP.cbl, line = 10
+--E: #152 Variable has zero length: ADDR-SUB; file = COBDUMP.cbl, line = 10, col 3
+--S: #31 Expected/found token mismatch: PROCEDURE/BINARY-CHAR; file = COBDUMP.cbl, line = 10, col 18

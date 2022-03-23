@@ -1,0 +1,37 @@
+TITLE                         GUI-MENU ƒeƒXƒg
+Online prog(FTEST_GUI)        FTEST_GUI
+Batch  prog(PRG001)           PRG001
+Batch  JCL                    BJ_JCL jcl\BAT_PRG_001.jcl
+BATCH  SORT                   BJ_JCL jcl\SORT_KEY1_S.jcl
+BATCH  FLCV                   BJ_JCL jcl\FLCV_INC_AND_AND.jcl
+
+MENUG_02                      BJ_MENUG menu\menug_02.txt
+
+dummy01                       DUMMY01
+dummy02                       DUMMY02
+dummy03                       DUMMY03
+dummy04                       DUMMY04
+dummy05                       DUMMY05
+dummy06                       DUMMY06
+dummy07                       DUMMY07
+dummy08                       DUMMY08
+dummy09                       DUMMY09
+dummy10                       DUMMY10
+Online prog(FTEST_GUI)        FTEST_GUI
+Batch  prog(PRG001)           PRG001
+Batch  JCL                    BJ_JCL jcl\BAT_PRG_001.jcl
+BATCH  SORT                   BJ_JCL jcl\SORT_KEY1_S.jcl
+BATCH  FLCV                   BJ_JCL jcl\FLCV_INC_AND_AND.jcl
+dummy11                       DUMMY11
+dummy12                       DUMMY12
+dummy13                       DUMMY13
+dummy14                       DUMMY14
+dummy15                       DUMMY15
+dummy16                       DUMMY16
+dummy17                       DUMMY17
+dummy18                       DUMMY18
+dummy19                       DUMMY19
+dummy20                       DUMMY20
+dummy21                       DUMMY21
+dummy22                       DUMMY22
+dummy23                       DUMMY23

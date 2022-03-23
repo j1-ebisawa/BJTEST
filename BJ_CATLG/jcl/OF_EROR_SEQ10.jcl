@@ -1,0 +1,7 @@
+#OFがファイル名誤りエラー
+@PARAM
+IF=(FN=%INDATA%IF_CTLG_SEQ10,ORG=S,RECL=10)
+OF=(FN=data\miss\OF_EROR_SEQ10,ORG=S)
+@PEND
+\AJ_FUTIL
+>end

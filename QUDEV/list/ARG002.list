@@ -1,0 +1,35 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\ARG002.cbl
+*>date generated  :  Wed Mar 23 10:56:33 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+identification division.                                         
+  program-id. ARG002.                                            
+environment division.                                            
+configuration section.                                           
+  input-output section.                                          
+  file-control.                                                  
+data division.                                                   
+working-storage section.                                         
+01  w-text   pic x(256).                                         
+linkage section.                                                 
+01  p1             pic S9(18).                                   
+01  p2             pic S9(18).                                   
+01  p3             pic S9(18).                                   
+procedure division using p1 p2 p3.                               
+p-001.                                                           
+    display "Start ARG002".                                      
+    move p1 to w-text.                                           
+    call "BJ_DSPER" using w-text.                                
+    move p2 to w-text.                                           
+    call "BJ_DSPER" using w-text.                                
+    move p3 to w-text.                                           
+    call "BJ_DSPER" using w-text.                                
+    move "---p1+p2=------" to w-text                             
+    call "BJ_DSPER" using w-text.                                
+    compute p3 = p1 + p2                                         
+    move p3 to w-text.                                           
+    call "BJ_DSPER" using w-text.                                
+    display "End   ARG002".                                      
+    GOBACK.                                                      
+                                                                 

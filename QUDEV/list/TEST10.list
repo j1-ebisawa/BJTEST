@@ -1,0 +1,22 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\TEST10.cbl
+*>date generated  :  Wed Mar 23 10:56:48 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+IDENTIFICATION DIVISION.                                         
+PROGRAM-ID. TEST10.                                              
+ENVIRONMENT DIVISION.                                            
+CONFIGURATION SECTION.                                           
+SOURCE-COMPUTER. PC.                                            
+OBJECT-COMPUTER. PC.                                            
+DATA DIVISION.                                                   
+WORKING-STORAGE SECTION.                                         
+01 WK-JOBID    PIC X(6).                                         
+PROCEDURE DIVISION.                                              
+MAIN SECTION.                                                    
+P-X.                                                             
+    DISPLAY "BJ_JOBID" UPON ENVIRONMENT-NAME.                    
+    ACCEPT  WK-JOBID   FROM ENVIRONMENT-VALUE.                   
+    DISPLAY WK-JOBID.                                            
+    GOBACK.                                                      
+                                                                 

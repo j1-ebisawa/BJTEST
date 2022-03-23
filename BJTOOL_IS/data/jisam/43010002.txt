@@ -1,0 +1,9 @@
+シリアル番号: 43010002
+製品: Batch Framework
+バージョン: 3.2.0
+ユーザー数:   5
+ＣＯＢＯＬ環境: isCOBOL
+対象ＯＳ: Windows
+使用期限: none
+プロダクトコード: MNNM NNNL NMNP NNNH GMME LLLK
+プロダクトキー:   RNNN NRNN NNNR

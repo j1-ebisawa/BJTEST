@@ -1,0 +1,3 @@
+I --> C:\Github\BJTEST\QUDEV\source\pr_FSEQ_30.cbl
+--W: #254 Procedure name same as data name: P-02; file = pr_FSEQ_30.cbl, line = 90
+--W: #42 Program-Id differs from source name: MK_FSEQ_30; file = pr_FSEQ_30.cbl, line = 2, col 12

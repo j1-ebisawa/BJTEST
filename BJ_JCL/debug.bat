@@ -1,0 +1,2 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
+iscrun -d BJ_ISRUN -c CONFIG\USERCFG.txt BJ_JCL JCL\DEF001.jcl

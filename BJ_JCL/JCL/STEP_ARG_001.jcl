@@ -1,0 +1,10 @@
+@display 'Test start'
+>P001
+\STEP ARG001  111 222 333 444
+\EXEC
+@display 'Test end'
+@SET QUTESTID  'STEP_ARG_001'
+@SET QUFNAME1  '%OLOG%&QUTESTID&.log'
+@SET QUFNAME2  '%CLOG%&QUTESTID&.log'
+\QUCOMPLOG 0006:0009 
+@end

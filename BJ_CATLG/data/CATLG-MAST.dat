@@ -1,0 +1,11 @@
+000010000010Sdata\INFILE\FSEQ_10                                                                                                             
+000030000030Sdata\INFILE\FSEQ_30                                                                                                             
+000040000040Sdata\INFILE\FSEQ_40                                                                                                             
+000000000010Tdata\INFILE\FTXT_10                                                                                                             
+000000000020Tdata\INFILE\FTXT_20                                                                                                             
+000030000030Sdata\OUTFL\CGET_OF_SEQ                                                                                                          
+000010000010Tdata\OUTFL\CGET_OF_TXT                                                                                                          
+000050000050Tdata\OUTFL\CATLG-MAST-PRT.txt                                                                                                   
+000050000050Tdata\OUTFL\CATLG-TMP-PRT.txt                                                                                                    
+000030000030Sdata\OUTFL\CGET_IF_SEQ                                                                                                          
+000041000041Tdata\OUTFL\CGET_IF_SEQ.prt                                                                                                      

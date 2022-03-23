@@ -1,0 +1,279 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\ftest.cbl
+*>date generated  :  Wed Mar 23 10:56:50 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>*************************
+ identification division. 
+ program-id. FTEST. 
+ environment division. 
+ CONFIGURATION SECTION. 
+      SPECIAL-NAMES. 
+input-output section. 
+file-control. 
+select ftest-file
+    assign to external FTEST
+    organization is indexed
+    access is dynamic
+    record key is ftest-key
+    alternate record key is ftest-altkey1 with duplicates
+    alternate record key is ftest-altkey2 with duplicates
+    lock mode is automatic
+    status is ftest-status. 
+data division. 
+file section. 
+fd  ftest-file. 
+01  ftest-record. 
+    03  ftest-key           pic x(4). 
+    03  ftest-altkey1. 
+      05  ftest_key1_seg1   pic x(5). 
+      05  ftest_key1_seg2   pic x(5). 
+    03  ftest-altkey2       pic x(10). 
+    03  ftest-number        pic 9(6). 
+    03  ftest-info          pic x(10). 
+working-storage section. 
+01  SYSTEM-INFORMATION. 
+    03  OSI-LENGHT                      pic x(2) comp-x value 28. 
+    03  OPERATING-SYSTEM                pic x    comp-x. 
+        88  OS-IS-UNIX                  VALUE 128. 
+        88  OS-IS-WINDOWS               VALUE 131. 
+    03  OSI-OS-VERSION                  pic x(4) comp-x. 
+    03  OSI-DBCS-SUPPORT                pic x    comp-x. 
+    03  OSI-CHAR-CODING                 pic x    comp-x. 
+    03  OSI-COUNTRY-ID                  pic x(2) comp-x. 
+    03  OSI-CODE-PAGE                   pic x(2) comp-x. 
+    03  OSI-PROCESS-TYPE                pic x    comp-x. 
+    03  OSI-RTS-CAPABILITY              pic x(4) comp-x. 
+    03  OSI-PRODUCT                     pic x(2) comp-x. 
+    03  OSI-PRODUCT-VERSION             pic x(2) comp-x. 
+    03  OSI-PRODUCT-REVISION            pic x(2) comp-x. 
+    03  OSI-PRODUCT-SP                  pic x(2) comp-x. 
+    03  OSI-FIXPACK                     pic x(2) comp-x. 
+01  omit-wk                 pic x. 
+01  main-handle usage handle. 
+*>>01  ftest-name              pic x(80) value "data/FTEST.dat".
+01  ftest-status. 
+    05 ftest-status-1       pic x. 
+    05 ftest-status-2       pic x. 
+    05 ftest-status-x       redefines ftest-status-2
+                            pic 99 comp-x. 
+77  menu-option             pic 9(2) value 0. 
+    88  next-selected           value 1. 
+    88  previous-selected       value 2. 
+    88  read-selected           value 3. 
+    88  write-selected          value 4. 
+    88  delete-selected         value 5. 
+    88  rewrite-selected        value 6. 
+    88  start-1-selected        value 7. 
+    88  start-2-selected        value 8. 
+    88  start-3-selected        value 9. 
+    88  open-inp-selected       value 10. 
+    88  open-out-selected       value 11. 
+    88  open-io-selected        value 12. 
+    88  close-selected          value 13. 
+    88  end-selected            value 14. 
+    01 error-status. 
+       05 error-status-1           pic x(1). 
+       05 error-status-2           pic x. 
+       05 error-status-3           pic 9(3). 
+
+screen section. 
+01  record-screen. 
+    03  primary-screen. 
+        05  "FTEST RECORD"      line 3   column 2. 
+        05  "Primary: "         line 5   column 5. 
+        05  using ftest-key     pic x(4)       column 20. 
+    03  alt1-screen. 
+        05  "Alt1: "            line + 1 column 5. 
+        05  using ftest-altkey1 pic x(10)       column 20. 
+    03  alt2-screen. 
+        05  "Alt2: "            line + 1 column 5. 
+        05  using ftest-altkey2 pic x(10)       column 20. 
+    03  info-screen. 
+        05  "Info Field: "      line + 1 column 5. 
+        05  using ftest-info    pic x(10)       column 20. 
+    03  number-screen. 
+        05  "number Field: "    line + 1 column 5. 
+        05  pic zzzzz9 blank when zero           column 20
+                                using ftest-number. 
+01  options-screen. 
+    03  "OPTIONS"               line 11 column 2. 
+    03  "1. Next"               line 13 column 5. 
+    03  "2. Previous"           line + 1 column 5. 
+    03  "3. Read"               line + 1 column 5. 
+    03  "4. Write"              line + 1 column 5. 
+    03  "5. Delete"             line + 1 column 5. 
+    03  "6. Rewrite"            line + 1 column 5. 
+    03  "7. Start 1"            line + 1 column 5. 
+
+    03  "8. Start 2"            line 13 column 25. 
+    03  "9. Start 3"            line + 1 column 25. 
+    03  "10. Open Input"        line + 1 column 24. 
+    03  "11. Open Output"       line + 1 column 24. 
+    03  "12. Open IO"           line + 1 column 24. 
+    03  "13. Close"             line + 1 column 24. 
+    03  "14. End"               line + 1 column 24. 
+
+    03  "Enter option:"         line + 2 column 5. 
+    03  pic z9 blank when zero using menu-option column + 2. 
+
+01  error-msg. 
+    03 "ERROR file status:"     line 24 column 40. 
+    03 filler pic x(5)         from error-status. 
+    03 " Press <RETURN>". 
+
+procedure division. 
+declaratives. 
+ftest-err-handling section. 
+    use after standard error procedure on ftest-file. 
+ftest-err. 
+    if ftest-status-1 = "9"
+       move ftest-status-1   to error-status-1
+       move "-"              to error-status-2
+       move ftest-status-2   to error-status-3
+    else
+       move space            to error-status
+       move ftest-status-1   to error-status-1
+       move ftest-status-2   to error-status-2
+    end-if. 
+    display error-msg. 
+    accept  omit-wk   at 2480. 
+    display omit-wk line 24 column 40 erase eol. 
+end declaratives. 
+
+level-1 section. 
+main-1. 
+    *>MOVE "data\ftest.dat"   TO ftest-name.
+    display window erase screen
+            *>background-color 7
+            title  "FTEST"
+            size 80
+            lines 24
+            handle main-handle. 
+    display at 0101 with erase screen. 
+    display "FTEST - Acucobol file test program" line 1 col 5. 
+    initialize ftest-record. 
+    display record-screen. 
+    display options-screen. 
+    perform get-option with test after until end-selected. 
+    close window main-handle. 
+    goback. 
+
+get-option. 
+    accept options-screen. 
+    display omit-wk line 24 column 60 erase eol. 
+    evaluate true
+      when next-selected
+           perform do-next
+      when previous-selected
+           perform do-previous
+      when read-selected
+           perform do-read
+      when write-selected
+           perform do-write
+      when delete-selected
+           perform do-delete
+      when rewrite-selected
+           perform do-rewrite
+      when start-1-selected
+           perform do-start-1
+      when start-2-selected
+           perform do-start-2
+      when start-3-selected
+           perform do-start-3
+      when open-inp-selected
+           open input ftest-file
+           if ftest-status = "00"
+              display "open successful" line 24 column 60 erase eol
+           end-if
+           move 0 to menu-option
+      when open-out-selected
+           open output ftest-file
+           if ftest-status = "00"
+              display "open successful" line 24 column 60 erase eol
+           end-if
+           move 0 to menu-option
+      when open-io-selected
+           open i-o ftest-file
+           if ftest-status = "00"
+              display "open successful" line 24 column 60 erase eol
+           end-if
+           move 0 to menu-option
+      when close-selected
+           close ftest-file
+           if ftest-status = "00"
+              display "close successful" line 24 column 60 erase eol
+           end-if
+           move 0 to menu-option
+      when end-selected
+           continue
+    end-evaluate. 
+
+file-operations. 
+do-next. 
+    read ftest-file next record. 
+    if ftest-status = "00"
+        display "next successful" line 24 column 60 erase eol
+    end-if. 
+    display record-screen. 
+
+do-previous. 
+    read ftest-file previous record. 
+    if ftest-status = "00"
+        display "previous successful" line 24 column 60 erase eol
+    end-if. 
+    display record-screen. 
+
+do-read. 
+    accept primary-screen. 
+    read ftest-file record. 
+    if ftest-status = "00"
+        display "read successful" line 24 column 60 erase eol
+    end-if. 
+    display record-screen. 
+
+do-write. 
+    accept record-screen. 
+    write ftest-record. 
+    if ftest-status = "00"
+        display "write successful" line 24 column 60 erase eol
+    end-if. 
+
+do-delete. 
+    accept primary-screen. 
+    delete ftest-file record. 
+    if ftest-status = "00"
+        display "delete successful" line 24 column 60 erase eol
+    end-if. 
+
+do-rewrite. 
+    accept record-screen. 
+    rewrite ftest-record. 
+    if ftest-status = "00"
+        display "rewrite successful" line 24 column 60 erase eol
+    end-if. 
+
+do-start-1. 
+    move spaces to ftest-record. 
+    accept primary-screen. 
+    start ftest-file key not less ftest-key. 
+    if ftest-status = "00"
+        display "start primary successful" line 24 column 60 erase eol
+    end-if. 
+
+do-start-2. 
+    move spaces to ftest-record. 
+    accept alt1-screen. 
+    start ftest-file key not less ftest-altkey1. 
+    if ftest-status = "00"
+        display "start first alt successful" line 24 column 60 erase eol
+    end-if. 
+
+do-start-3. 
+    move spaces to ftest-record. 
+    accept alt2-screen. 
+    start ftest-file key not less ftest-altkey2. 
+    if ftest-status = "00"
+        display "start second alt successful" line 24 column 60 erase
+        eol
+    end-if. 

@@ -1,0 +1,1 @@
+iscrun AJ_ISRUN -c config\userconfig.txt AJ_JCL jcl\test.jcl

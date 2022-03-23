@@ -1,0 +1,31 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\PRG003.cbl
+*>date generated  :  Wed Mar 23 10:56:39 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+identification division.                                         
+  program-id. PRG003.                                            
+environment division.                                            
+configuration section.                                           
+  input-output section.                                          
+  file-control.                                                  
+data division.                                                   
+working-storage section.                                         
+01  w-text   pic x(256).                                         
+01  main-handle usage handle.                                    
+procedure division.                                              
+p-001.                                                           
+    display floating window erase screen handle main-handle.     
+    display "Start BAT003".                                      
+    move "abc" to w-text.                                        
+    call "BJ_DSPER" using w-text.                                
+    move "123" to w-text.                                        
+    call "BJ_DSPER" using w-text.                                
+    move "def" to w-text.                                        
+    call "BJ_DSPER" using w-text.                                
+    move "456" to w-text.                                        
+    call "BJ_DSPER" using w-text.                                
+    display "End   BAT003".                                      
+    close window  main-handle.                                   
+    GOBACK.                                                      
+                                                                 

@@ -1,0 +1,23 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\PUASE_ON.cbl
+*>date generated  :  Wed Mar 23 10:56:41 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+identification division.                                         
+program-id. PAUSE_ON.                                            
+environment division.                                            
+ CONFIGURATION SECTION.                                          
+ SPECIAL-NAMES.                                                  
+input-output section.                                            
+file-control.                                                    
+data division.                                                   
+working-storage section.                                         
+procedure division.                                              
+                                                                 
+level-1 section.                                                 
+main-logic.                                                      
+*>>                                                                
+    display "BJ_FUTIL_LOCK_CHK1"  upon environment-name.         
+    display "Y"                   upon environment-value.        
+    Goback.                                                      
+*> --W: #42 Program-Id differs from source name: PAUSE_ON; file = PUASE_ON.cbl, line = 2, col 12

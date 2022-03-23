@@ -1,0 +1,11 @@
+BJ_JCL_001 *** BJ_JCL 開始  ***:(jcl\PAUSE002.jcl)
+'Test start'
+BJ_JCL_007 00002:>P001
+data\INFILE\XXXXX
+BJ_JCL_007 00005:>P002
+data\OUTFL\YYYY
+'Test end'
+BJ_JCL_010 00009 PAUSE:'Press /x'
+BJ_JCL_002 *** AJ_JCL 終了  ***
+BJ_JCL_006 ***** 開始時間   22年03月11日 : 13時19分49.28秒
+BJ_JCL_006 ***** 終了時間   22年03月11日 : 13時19分52.34秒        [00:00:03.06]

@@ -1,0 +1,5 @@
+0001aaa       xxx       00011100ebi01aa
+0010bbb       yyy       00022200ebi02bbb
+0050ccc       ppp       00033300ebi03c
+0030ddd       qqq       00044400ebi04xxx
+OOOOTUIKA               000000

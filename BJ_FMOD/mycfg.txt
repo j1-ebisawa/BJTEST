@@ -1,0 +1,28 @@
+BJ_LICENSE_DIR      ..\BJTOOL_IS\data\jisam
+
+
+BJ_JOB_TEMPDIR      temp
+BJ_JOBLG_FORMAT     log\+DATE+_+TIME+_+JCL+.log
+BJ_JOBID_FILE       ..\JOBIDFL
+BJ_MESSAGE_SCREEN   N
+
+BJ_MENU_JCL_CALL    Y
+
+BJ_JCL_DUMMYNAME    DUMMY
+
+BJ_MESSAGE_SCREEN   Y
+BJ_JCL_DISPLAYLOG   Y
+BJ_FLCNV_LOGOUT     YES
+BJ_SORT_LOGOUT      YES
+BJ_JCL_LOGOUT       YES
+BJ_JOB_TEMPDIR      TEMP
+BJ_JCL_NO_CFGVAR    S
+
+
+##SHARE all:1 no:2 readonly:3
+##FTEST_SHARE 2
+
+
+FTEST             data\FTEST
+STEST             data\STEST
+LTEST             data\LTEST.txt

@@ -1,0 +1,26 @@
+        identification division.
+        program-id. JCL10020010403. 
+        environment division.
+        data division.
+        working-storage section.
+        01  display1                      pic x(50).
+        01  display2                      pic x(50).
+        01  display3                      pic x(50).
+        01  display4                      pic x(50).
+        01  display5                      pic x(50).
+        01  display6                      pic x(50).
+        01  display7                      pic x(50).
+        01  display8                      pic x(50).
+        01  display9                      pic x(50).
+        procedure division using display1, display2, display3, display4,
+            display5, display6, display7, display8, display9.
+        proc1.
+        	display display1.
+        	display display2.
+        	display display3.
+        	display display4.
+        	display display5.
+        	display display6.
+        	display display7.
+        	display display8.
+        	display display9.

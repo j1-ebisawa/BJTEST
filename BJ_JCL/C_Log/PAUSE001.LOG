@@ -1,0 +1,15 @@
+BJ_JCL_001 *** BJ_JCL 開始  ***:(jcl\PAUSE001.jcl)
+'Test start'
+BJ_JCL_007 00002:>P001
+data\INFILE\XXXXX
+BJ_JCL_007 00005:>P002
+data\OUTFL\YYYY
+'Test end'
+'Press Enter'
+BJ_JCL_010 00010 PAUSE:
+BJ_JCL_007 00014:\QUCOMPLOG 0002:0007
+BJ_JCL_004 STEP=000001----22年03月11日 : 13時19分19.08秒     開始
+BJ_JCL_005 ---------------22年03月11日 : 13時19分19.08秒  605終了 [00:00:00.00]
+BJ_JCL_002 *** AJ_JCL 終了  ***
+BJ_JCL_006 ***** 開始時間   22年03月11日 : 13時19分17.38秒
+BJ_JCL_006 ***** 終了時間   22年03月11日 : 13時19分19.08秒        [00:00:01.70]

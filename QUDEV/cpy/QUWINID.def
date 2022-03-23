@@ -1,0 +1,22 @@
+      *  ÇnÇrÇÃñºëOÇ∆èåè
+       01  OS-NAME                 PIC X(14).
+         88  OS-WIN2003            VALUE "Windows2003".
+         88  OS-WINXP              VALUE "WindowsXP".
+         88  OS-WIN2000            VALUE "Windows2000".
+         88  OS-WINNT40            VALUE "WindowsNT 4.0".
+         88  OS-WINNT351           VALUE "WindowsNT 3.51".
+         88  OS-WINME              VALUE "WindowsME".
+         88  OS-WIN98SE            VALUE "Windows98SE".
+         88  OS-WIN98              VALUE "Windows98".
+         88  OS-WIN95C             VALUE "Windows95C".
+         88  OS-WIN95B             VALUE "Windows95B".
+         88  OS-WIN95A             VALUE "Windows95A".
+         88  OS-UNKNOWN            VALUE "UNKNOWN".
+       01  OS-VERSION.
+         03  OS-MAJOR-VERSION      PIC 9(02).
+         03  OS-VERSION-DIV-1      PIC X(01) VALUE ".".
+         03  OS-MINOR-VERSION      PIC 9(02).
+         03  OS-VERSION-DIV-2      PIC X(01) VALUE ".".
+         03  OS-BUILD-VERSION      PIC 9(04).
+         03  OS-OSPLATFORM         PIC 9(03).
+         03  OS-SPINFO             PIC X(20).

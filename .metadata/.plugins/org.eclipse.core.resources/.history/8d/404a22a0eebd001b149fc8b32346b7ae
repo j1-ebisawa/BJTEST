@@ -1,0 +1,38 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.    JCL10010020183.
+       ENVIRONMENT DIVISION.
+       SPECIAL-NAMES.
+           CRT STATUS     IS CRTSTS.
+      *
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       01  CRTSTS         PIC  9(03).
+       77  TEST_WK        PIC  X(20).
+       99  DSP_WK         PIC  X(256).
+       PROCEDURE          DIVISION.
+       MAIN-CONTROL       SECTION.
+           ACCEPT   TEST_WK AUTO.
+           STRING "1.RECORD " DELIMITED SIZE
+                  TEST_WK DELIMITED SIZE
+             INTO DSP_WK.
+           CALL  "AJ_DSPER"  USING DSP_WK
+           ACCEPT   TEST_WK AUTO.
+           STRING "2.RECORD " DELIMITED SIZE
+                  TEST_WK DELIMITED SIZE
+             INTO DSP_WK.
+           CALL  "AJ_DSPER"  USING DSP_WK
+           ACCEPT   TEST_WK AUTO.
+           STRING "3.RECORD " DELIMITED SIZE
+                  TEST_WK DELIMITED SIZE
+             INTO DSP_WK.
+           CALL  "AJ_DSPER"  USING DSP_WK
+           ACCEPT   TEST_WK AUTO.
+           STRING "4.RECORD " DELIMITED SIZE
+                  TEST_WK DELIMITED SIZE
+             INTO DSP_WK.
+           CALL  "AJ_DSPER"  USING DSP_WK
+           GOBACK.
+           

@@ -1,0 +1,10 @@
+      *>
+       01 QUL-PROC-ID      PIC  X(03).  *>INT,WRT,TRM
+      *>
+       01 QUL-PARAM-ID     PIC  X(20).   *>test ID
+      *>
+       01 QUL-RES          PIC  X(02).
+      *>
+       01 QUL-COMM1        PIC  X(40).
+      *>
+       01 QUL-RETURNCD     PIC  S9(05).  *>OK:0, 1-99:warning, 100-:error

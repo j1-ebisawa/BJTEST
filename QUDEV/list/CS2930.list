@@ -1,0 +1,271 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\CS2930.CBL
+*>date generated  :  Wed Mar 23 10:56:34 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+IDENTIFICATION DIVISION.                                         
+PROGRAM-ID. CS2930.                                              
+DATA DIVISION.                                                   
+WORKING-STORAGE SECTION.                                         
+                                                                 
+*>COPY "codeset_2930.cpy". *>For HBS                          
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\codeset_2930.cpy
+*>    CNV16                                                        
+01 Var-Cset.                                                     
+   02 Cset-EBCDIC-ASCII.                                         
+      03  FILLER PIC X(16)                                       
+          VALUE X"000102039C09867F978D8E0B0C0D0E0F".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"101112139D8508871819928F1C1D1E1F".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"80818283840A171B88898A8B8C050607".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"909116939495960498999A9B14159E1A".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"20A1A2A3A4A5A6A7A8A9A02E3C282B7C".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"26AAABACADAEAFE1B0E221E02A293BE3".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"2D2F6162636465666768E72C255F3E3F".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"5B696A6B6C6D6E6F70603A2340273D22".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"5DB1B2B3B4B5B6B7B8B9BA71BBBCBDBE".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"BFC0C1C2C3C4C5C6C7C8C972E4CACBCC".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"7EE5CDCECFD0D1D2D3D4D573D6D7D8D9".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"5EE65C7475767778797ADADBDCDDDEDF".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"7B414243444546474849E8E9EAEBECED".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"7D4A4B4C4D4E4F505152EEEFF0F1F2F3".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"249F535455565758595AF4F5F6F7F8F9".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"30313233343536373839FAFBFCFDFEFF".             
+*>                                                                 
+   02 FILLER REDEFINES CSET-EBCDIC-ASCII.                        
+      03 Cset-EBAS PIC X OCCURS 256.                             
+*>                                                                 
+   02 Cset-ASCII-EBCDIC.                                         
+      03  FILLER PIC X(16)                                       
+          VALUE X"00010203372D2E2F1605250B0C0D0E0F".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"101112133C3D322618193F271C1D1E1F".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"405A7F7BE06C507D4D5D5C4E6B604B61".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"F0F1F2F3F4F5F6F7F8F97A5E4C7E6E6F".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"7CC1C2C3C4C5C6C7C8C9D1D2D3D4D5D6".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"D7D8D9E2E3E4E5E6E7E8E970B280B06D".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"79626364656667686971727374757677".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"788B9BABB3B4B5B6B7B8B9C04FD0A007".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"202122232415061728292A2B2C090A1B".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"30311A333435360838393A3B04143EE1".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"4A414243444546474849515253545556".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"588182838485868788898A8C8D8E8F90".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"9192939495969798999A9D9E9FA2A3A4".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"A5A6A7A8A9AAACADAEAFBABBBCBDBEBF".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"5B57595F9CA1B16ACACBCCCDCECFDADB".             
+      03  FILLER PIC X(16)                                       
+          VALUE X"DCDDDEDFEAEBECEDEEEFFAFBFCFDFEFF".             
+*>                                                                 
+   02 FILLER REDEFINES Cset-ASCII-EBCDIC.                        
+      03 Cset-ASEB PIC X OCCURS 256.                             
+*>                                                                 
+   02  Area-Length                 PIC 9(9) COMP-5.              
+   02  Current-Position            PIC 9(9) COMP-5.              
+   02  Char-Value                  PIC 9(2) COMP-X.              
+*>                                                                 
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\codeset_2930.cpy
+                                                                 
+01 Func-No                  pic x comp-x value 0.                
+01 tmp-byte                 pic x.                               
+01 tmp-string               pic x(256).                          
+01 Source-Length            pic 9(9) comp-x.                     
+78 NChr                     value X"C7".                         
+78 AdScan                   value X"A1".                         
+01 Pure-DBCS-Flag           pic 9(2) comp-x.                     
+    88 Pure-DBCS            value 1.                             
+01 ignored                  pic 9(2) comp-x value 0.             
+01 func-1                   pic 9(2) comp-x value 1.             
+01 Len-Left                 pic 9(9) comp-x.                     
+01 Len-of-DBCS              pic 9(9) comp-x.                     
+01 Start-Pos                PIC 9(9) comp-x.                     
+                                                                 
+01  mem-flags                   pic x(4) comp-5 value 0.         
+                                                                 
+LINKAGE SECTION.                                                 
+01  Cset-Flag                       PIC 9(2) COMP-X.             
+01  Cset-Length                     PIC 9(9) COMP-X.             
+01  Cset-Area                       PIC X(256).                  
+                                                                 
+PROCEDURE DIVISION USING Cset-Flag, Cset-Length, Cset-Area.      
+Convertion SECTION.                                              
+Conv-Control.                                                    
+                                                                 
+    MOVE Cset-Length TO Area-Length                              
+                                                                 
+    MOVE 0 TO Current-Position.                                  
+                                                                 
+    EVALUATE Cset-Flag                                           
+    WHEN 0                                                       
+        move 4 to func-no                                        
+        PERFORM Conv-EB-JIS                                      
+    WHEN 1                                                       
+        move 5 to func-no                                        
+        PERFORM Conv-JIS-EB                                      
+    WHEN 2                                                       
+        MOVE Cset-EBCDIC-ASCII TO Cset-AREA                      
+    WHEN 3                                                       
+        MOVE Cset-ASCII-EBCDIC TO Cset-AREA                      
+    WHEN 4                                                       
+        move 4 to func-no                                        
+        Perform Pure-DBCS-EB-JIS                                 
+    WHEN 5                                                       
+        move 5 to func-no                                        
+        Perform Pure-DBCS-JIS-EB                                 
+    END-EVALUATE.                                                
+Conv-Exit.                                                       
+    GOBACK.                                                      
+                                                                 
+*> Converts mixed strings of SBCS and DBCS characters. SBCS        
+*> characters are converted using the internal table. DBCS         
+*> strings, surrounded by SO and SI characters, are passed to the  
+*> OS for conversion.                                              
+Conv-EB-JIS SECTION.                                             
+Conv-EB-JIS-Next.                                                
+    IF Current-Position < Area-Length                            
+        if Cset-Area (Current-Position + 1:1) not = X"0E"        
+            MOVE Cset-Area  (Current-Position + 1:1)             
+              TO Char-Value (1                   :1)             
+            MOVE Cset-EBAS (Char-Value + 1)                      
+              TO Cset-Area (Current-Position + 1: 1)             
+            ADD 1 TO Current-Position                            
+            GO TO Conv-EB-JIS-Next                               
+        else                                                     
+            compute len-left = Area-length - Current-position    
+            move Current-position to Start-Pos                   
+            inspect Cset-area (Start-Pos + 1:len-left)           
+                tallying Current-Position for characters before  
+                initial X"0F"                                    
+            Add 1 to Current-position                            
+            compute len-of-dbcs =  Current-position - Start-pos  
+*> Strip off the SO/SI characters                                  
+            subtract 2 from len-of-dbcs                          
+                                                                 
+            move len-of-dbcs to Source-Length                    
+            call "MFTRNSDT" USING Func-No                        
+                                  Source-Length                  
+                            Cset-area (Start-Pos + 2:len-of-dbcs)
+            on exception                                         
+                perform Call-Failed                              
+            end-call                                             
+            GO TO Conv-EB-JIS-Next                               
+        end-if                                                   
+    end-if.                                                      
+                                                                 
+*> Converts mixed strings of SBCS and DBCS characters. SBCS        
+*> characters are converted using the internal table. DBCS         
+*> strings, surrounded by SO and SI characters, are passed to the  
+*> OS for conversion.                                              
+Conv-JIS-EB SECTION.                                             
+Conv-JIS-EB-Next.                                                
+    IF Current-Position < Area-Length                            
+            if Cset-Area (Current-Position + 1:1) not = X"0E"    
+                MOVE Cset-Area  (Current-Position + 1:1)         
+                  TO Char-Value (1                   :1)         
+                MOVE Cset-ASEB (Char-Value + 1)                  
+                  TO Cset-Area (Current-Position + 1: 1)         
+                ADD 1 TO Current-Position                        
+                GO TO Conv-JIS-EB-Next                           
+            else                                                 
+                compute len-left = Area-length - Current-position
+                move Current-position to Start-Pos               
+                inspect Cset-area (Start-Pos + 1:len-left)       
+                    tallying Current-Position for characters     
+                    before initial X"0F"                         
+                Add 1 to Current-position                        
+                compute len-of-dbcs =  Current-position -        
+                                            Start-pos            
+*> Strip off the SO/SI characters                                  
+            subtract 2 from len-of-dbcs                          
+                                                                 
+                move len-of-dbcs to Source-Length                
+                call "MFTRNSDT" USING                            
+                        Func-No                                  
+                        Source-length                            
+                        Cset-area (Start-Pos + 2:len-of-dbcs)    
+                on exception                                     
+                    perform Call-Failed                          
+                end-call                                         
+                GO TO Conv-JIS-EB-Next                           
+            end-if                                               
+    end-if.                                                      
+                                                                 
+*> Converts Pure DBCS strings (PIC G etc). These strings do not    
+*> contain SO or SI characters or SBCS characters.                 
+Pure-DBCS-EB-JIS SECTION.                                        
+    move Area-Length to Source-Length                            
+    call "MFTRNSDT" USING Func-No                                
+                          Source-length                          
+                          Cset-area (1:Area-length)              
+    on exception                                                 
+        perform Call-Failed                                      
+    end-call                                                     
+    .                                                            
+                                                                 
+*> Converts Pure DBCS strings (PIC G etc). These strings do not    
+*> contain SO or SI characters or SBCS characters.                 
+Pure-DBCS-JIS-EB SECTION.                                        
+    perform validate-pure                                        
+    if Pure-DBCS                                                 
+        move Area-Length to Source-Length                        
+        call "MFTRNSDT" USING Func-No                            
+                              Source-length                      
+                              Cset-area (1:Area-length)          
+        on exception                                             
+            perform Call-Failed                                  
+        end-call                                                 
+    else                                                         
+*>        display "Illegal characters in string" Area-length       
+        Perform Conv-JIS-EB                                      
+    end-if                                                       
+    .                                                            
+                                                                 
+Validate-Pure SECTION.                                           
+    move 0 to Pure-DBCS-Flag                                     
+    move Cset-area(1:1) to tmp-byte                              
+    if area-length > 256                                         
+        move Cset-area(1:256) to tmp-string                      
+        call AdScan using func-1 tmp-string                      
+    else                                                         
+        move Cset-area(1:area-length) to                         
+                tmp-string(1:area-length)                        
+        call AdScan using func-1 tmp-string(1:area-length)       
+    end-if                                                       
+    if tmp-byte = tmp-string(1:1)                                
+        move 1 to Pure-DBCS-Flag                                 
+    end-if.                                                      
+                                                                 
+*>                                                                 
+*> Performed if call to MFTRNSDT(.DLL) fails for whatever reason.  
+*>                                    >> SCM << 28/1/92            
+Call-Failed Section.                                             
+    display                                                      
+      "* CODESET unable to call MFTRNSDT. Data may be incorrect."
+    goback.                                                      
+                                                                 

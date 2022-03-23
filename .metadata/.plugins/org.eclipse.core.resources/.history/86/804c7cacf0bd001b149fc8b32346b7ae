@@ -1,0 +1,92 @@
+       identification  division.
+       program-id.     JCL10010010043.
+       environment     division.
+       CONFIGURATION   SECTION.
+       SPECIAL-NAMES.
+            SWITCH-0 IS  SW0
+                     ON  STATUS IS SW0-ON
+                     OFF STATUS IS SW0-OFF
+            SWITCH-1 IS  SW1
+                     ON  STATUS IS SW1-ON
+                     OFF STATUS IS SW1-OFF
+            SWITCH-2 IS  SW2
+                     ON  STATUS IS SW2-ON
+                     OFF STATUS IS SW2-OFF
+            SWITCH-3 IS  SW3
+                     ON  STATUS IS SW3-ON
+                     OFF STATUS IS SW3-OFF
+            SWITCH-4 IS  SW4
+                     ON  STATUS IS SW4-ON
+                     OFF STATUS IS SW4-OFF
+            SWITCH-5 IS  SW5
+                     ON  STATUS IS SW5-ON
+                     OFF STATUS IS SW5-OFF
+            SWITCH-6 IS  SW6
+                     ON  STATUS IS SW6-ON
+                     OFF STATUS IS SW6-OFF
+            SWITCH-7 IS  SW7
+                     ON  STATUS IS SW7-ON
+                     OFF STATUS IS SW7-OFF
+            SWITCH-8 IS  SW8
+                     ON  STATUS IS SW8-ON
+                     OFF STATUS IS SW8-OFF.
+       data            division.
+       01   WK-MSG   PIC   X(256).
+       procedure       division.
+       main-rtn.
+           if  SW0-ON
+               MOVE "SWITCH-00 :ON" TO WK-MSG
+           else
+               MOVE "SWITCH-00 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW1-ON
+               MOVE "SWITCH-01 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-01 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW2-ON
+               MOVE "SWITCH-02 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-02 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW3-ON
+               MOVE "SWITCH-03 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-03 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW4-ON
+               MOVE "SWITCH-04 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-04 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW5-ON
+               MOVE "SWITCH-05 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-05 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW6-ON
+               MOVE "SWITCH-06 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-06 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW7-ON
+               MOVE "SWITCH-07 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-07 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           if  SW8-ON
+               MOVE "SWITCH-08 :ON" TO WK-MSG
+           else    
+               MOVE "SWITCH-08 :off" TO WK-MSG
+           end-if.
+           CALL "AJ_DSPER" USING WK-MSG.
+           goback.
+           

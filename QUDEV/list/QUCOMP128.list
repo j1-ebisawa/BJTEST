@@ -1,0 +1,180 @@
+*>(c) 2005 - 2021 Veryant
+*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
+*>source file name:  C:\Github\BJTEST\QUDEV\source\QUCOMP128.cbl
+*>date generated  :  Wed Mar 23 10:56:42 GMT+09:00 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+ identification division.                                        
+ program-id. QUCOMP128.                                          
+environment division.                                            
+ CONFIGURATION SECTION.                                          
+ SPECIAL-NAMES.                                                  
+input-output section.                                            
+ file-control.                                                   
+     select file1 assign to fname1                               
+         file status fsts.                                       
+     select file2 assign to fname2                               
+         file status fsts.                                       
+ data division.                                                  
+ file section.                                                   
+ fd  file1.                                                      
+ 01  f1-rec   pic x(1).                                          
+ fd  file2.                                                      
+ 01  f2-rec   pic x(1).                                          
+ working-storage section.                                        
+*>    copy "QUTESTID.lks".                                         
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+*>>                                                                
+01 QUL-PROC-ID      PIC  X(03). *>INT,WRT,TRM                   
+*>>                                                                
+01 QUL-PARAM-ID     PIC  X(20). *>test ID                      
+*>>                                                                
+01 QUL-RES          PIC  X(02).                                  
+*>>                                                                
+01 QUL-COMM1        PIC  X(40).                                  
+*>>                                                                
+01 QUL-RETURNCD     PIC  S9(05). *>OK:0, 1-99:warning, 100-:erro
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+ 01  fsts     pic xx.                                            
+ 01  fname1   pic x(80).                                         
+ 01  fname2   pic x(80).                                         
+ 01  file-details1.                                              
+     03  cblte-fe-filedate1.                                     
+         05   cblte-fe-day1         pic x comp-x.                
+         05   cblte-fe-month1       pic x comp-x.                
+         05   cblte-fe-year1        pic x(2) comp-x.             
+     03  cblte-fe-filetime1.                                     
+         05   cblte-fe-hours1       pic x comp-x.                
+         05   cblte-fe-minutes1     pic x comp-x.                
+         05   cblte-fe-seconds1     pic x comp-x.                
+         05   cblte-fe-hundredths1  pic x comp-x.                
+ 01  file-details2.                                              
+     03  cblte-fe-filedate2.                                     
+         05  cblte-fe-day2          pic x comp-x.                
+         05  cblte-fe-month2        pic x comp-x.                
+         05  cblte-fe-year2         pic x(2) comp-x.             
+     03  cblte-fe-filetime2.                                     
+         05   cblte-fe-hours2       pic x comp-x.                
+         05   cblte-fe-minutes2     pic x comp-x.                
+         05   cblte-fe-seconds2     pic x comp-x.                
+         05   cblte-fe-hundredths2  pic x comp-x.                
+ 01  status-code                    pic X(2) COMP-5.             
+ 01  wk18-1                         pic 9(18).                   
+ 01  wk18-2                         pic 9(18).                   
+ 01  DSPERp                         pic x(256).                  
+ 01  loop-cnt                       pic x(4) comp-5.             
+ 01  diff-cnt                       pic x(4) comp-5.             
+ 01  wk1-x                          pic x.                       
+ 01  wk1-n redefines wk1-x          pic x comp-x.                
+ 01  wk2-x                          pic x.                       
+ 01  wk2-n redefines wk2-x          pic x comp-x.                
+ 01  adr                            pic x(8) comp-x.             
+ 01  ad-hex                         pic x(16).                   
+ 01  f1-eofd                        pic 9.                       
+ 88  f1-eof   value 1.                                           
+ 01  f2-eofd                        pic 9.                       
+ 88  f2-eof   value 1.                                           
+ 01  x-enter                        pic x(1).                    
+ 01  x-returncd                     pic x(32).                   
+ procedure division.                                             
+ proc1.                                                          
+     perform init-proc.                                          
+     perform comp-proc.                                          
+     perform last-proc.                                          
+     exit program.                                               
+ init-proc.                                                      
+     move "OK" to QUL-RES.                                       
+     move space to fname1, fname2.                               
+     display "QUFNAME1" upon environment-name.                   
+     accept fname1      from environment-value.                  
+     display "QUFNAME2" upon environment-name.                   
+     accept fname2      from environment-value.                  
+     if fname1 = space or fname2 = space                         
+         move 255 to return-code                                 
+         goback                                                  
+     end-if.                                                     
+     call "CBL_CHECK_FILE_EXIST"  using    fname1                
+         file-details1                                           
+     returning status-code.                                      
+     if status-code not = "0000"                                 
+         move status-code to return-code                         
+         goback                                                  
+     end-if.                                                     
+     call "CBL_CHECK_FILE_EXIST"  using    fname2                
+         file-details2                                           
+     returning status-code.                                      
+     if status-code not = "0000"                                 
+         move status-code to return-code                         
+         goback                                                  
+     end-if.                                                     
+     open input file1 file2.                                     
+     move X'0A' to x-enter.                                      
+     display "QUTESTID"      upon environment-name.              
+     accept QUL-PARAM-ID     from environment-value.             
+     move 0 to diff-cnt f1-eofd f2-eofd.                         
+ comp-proc.                                                      
+     move space to f1-rec f2-rec.                                
+     perform varying loop-cnt from 1 by 1                        
+         until f1-eof or loop-cnt > 128                          
+         read file1 at end                                       
+             set f1-eof to true                                  
+             add 1 to diff-cnt                                   
+             move "File Size Too Less!" to DSPERp                
+             call "BJ_DSPER" using DSPERp                        
+             move "NG" to QUL-RES                                
+             exit perform                                        
+         end-read                                                
+     end-perform.                                                
+     perform varying loop-cnt from 1 by 1                        
+         until f1-eof or f2-eof or loop-cnt > 128                
+         read file2 at end                                       
+             set f2-eof to true                                  
+             add 1 to diff-cnt                                   
+             move "File Size Too Less!" to DSPERp                
+             call "BJ_DSPER" using DSPERp                        
+             move "NG" to QUL-RES                                
+             exit perform                                        
+         end-read                                                
+     end-perform.                                                
+     perform varying loop-cnt from 1 by 1                        
+         until f1-eof or f2-eof                                  
+         read file1 at end                                       
+             set f1-eof to true                                  
+             exit perform                                        
+         end-read                                                
+         read file2 at end                                       
+             set f2-eof to true                                  
+             exit perform                                        
+         end-read                                                
+         if f1-rec not = f2-rec                                  
+             add 1 to diff-cnt                                   
+             move space to DSPERp                                
+             move loop-cnt to wk18-1                             
+             string "Dump-out:" delimited size                   
+                 wk18-1(10:) delimited size                      
+                 " - " delimited size                            
+                 f1-rec delimited size                           
+                 "/" f2-rec delimited size                       
+             into DSPERp                                         
+             call "BJ_DSPER" using DSPERp                        
+             move "NG" to QUL-RES                                
+         end-if                                                  
+     end-perform.                                                
+ last-proc.                                                      
+     close file1 file2.                                          
+     if diff-cnt = 0                                             
+         move "OK!!!" to DSPERp                                  
+     else                                                        
+         move space to DSPERp                                    
+         move diff-cnt to wk18-1                                 
+         string "NG!   diff-cnt:" delimited size                 
+             wk18-1(10:) delimited size                          
+         into DSPERp                                             
+     end-if.                                                     
+     call "BJ_DSPER" using DSPERp.                               
+     CALL "QUTESTID" USING "INT" "D" "D" "D" QUL-RETURNCD        
+     call "QUTESTID" using "WRT"                                 
+                     QUL-PARAM-ID QUL-RES QUL-COMM1 QUL-RETURNCD. 
+     CALL "QUTESTID" USING "TRM".                                
+                                                                 
+*> --E: #43 Illegal condition status-code & "0000"; file = QUCOMP128.cbl, line = 81, col 5
+*> --E: #43 Illegal condition status-code & "0000"; file = QUCOMP128.cbl, line = 88, col 5

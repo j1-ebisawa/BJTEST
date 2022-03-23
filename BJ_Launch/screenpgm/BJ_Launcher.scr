@@ -1,0 +1,215 @@
+      *BJ_Launcher.scr is generated from C:\BJTEST\BJ_Launcher\screen\BJ_Launcher.isp
+       01 screen-1
+       .
+          03 screen-1-la-1 Label
+             line 10.7
+             column 2.4
+             size 22.2 cells 
+             lines 2.9 cells 
+             id 1
+             title "Current Working directory"
+             .
+          03 screen-1-ef-1 Entry-Field
+             line 10.9
+             column 26.8
+             size 48.8 cells 
+             lines 2.7 cells 
+             id 2
+             3-d
+             read-only
+             value screen-1-ef-1-val
+             .
+          03 screen-1-gr-1 Grid
+             line 21.2
+             column 2.4
+             size 22.2 cells 
+             lines 41.5 cells 
+             id 3
+             boxed
+             column-headings
+             vscroll
+             row-headings
+             row-dividers 1
+             heading-background-color rgb x#f3c0a7 
+             heading-foreground-color rgb x#000000
+             cursor-frame-width 3
+             num-col-headings 1
+             num-row-headings 1
+             num-rows 15
+             row-selected-background-color rgb x#9cf145
+             .
+          03 screen-1-la-2 Label
+             line 22.6
+             column 28.3
+             size 17.3 cells 
+             lines 2.7 cells 
+             id 4
+             title "Selected filename"
+             .
+          03 screen-1-ef-2 Entry-Field
+             line 22.0
+             column 47.2
+             size 28.4 cells 
+             lines 3.3 cells 
+             id 5
+             3-d
+             value screen-1-ef-2-val
+             .
+          03 screen-1-la-3 Label
+             line 29.5
+             column 28.2
+             size 16.1 cells 
+             lines 2.9 cells 
+             id 6
+             title "iscrun configuration"
+             .
+          03 screen-1-ef-3 Entry-Field
+             line 29.5
+             column 47.2
+             size 28.4 cells 
+             lines 3.2 cells 
+             id 7
+             3-d
+             value screen-1-ef-3-val
+             .
+          03 screen-1-la-4 Label
+             line 35.5
+             column 28.1
+             size 19.2 cells 
+             lines 2.4 cells 
+             id 8
+             title "BJ_ISRUN configuration"
+             .
+          03 screen-1-ef-4 Entry-Field
+             line 34.9
+             column 47.2
+             size 28.4 cells 
+             lines 3.1 cells 
+             id 9
+             3-d
+             value screen-1-ef-4-val
+             .
+          03 screen-1-la-5 Label
+             line 41.3
+             column 27.8
+             size 16.4 cells 
+             lines 2.4 cells 
+             id 10
+             title "Execution log file"
+             .
+          03 screen-1-ef-5 Entry-Field
+             line 41.3
+             column 47.2
+             size 28.4 cells 
+             lines 2.8 cells 
+             id 11
+             3-d
+             value screen-1-ef-5-val
+             .
+          03 screen-1-pb-1 Push-Button
+             exception-value 1
+             line 14.4
+             column 77.7
+             size 6.7 cells 
+             lines 3.4 cells 
+             id 12
+             title "Select"
+             .
+          03 screen-1-pb-2 Push-Button
+             exception-value 5
+             line 22.0
+             column 77.6
+             size 6.8 cells 
+             lines 3.2 cells 
+             id 13
+             title "View"
+             .
+          03 screen-1-pb-3 Push-Button
+             exception-value 6
+             line 30.0
+             column 77.6
+             size 6.8 cells 
+             lines 2.9 cells 
+             id 14
+             title "View"
+             .
+          03 screen-1-pb-4 Push-Button
+             exception-value 7
+             line 34.9
+             column 77.6
+             size 6.8 cells 
+             lines 3.7 cells 
+             id 15
+             title "View"
+             .
+          03 screen-1-pb-5 Push-Button
+             exception-value 8
+             line 41.7
+             column 77.7
+             size 6.8 cells 
+             lines 3.1 cells 
+             id 16
+             title "View"
+             .
+          03 screen-1-pb-6 Push-Button
+             exception-value 2
+             line 49.9
+             column 36.2
+             size 9.4 cells 
+             lines 3.2 cells 
+             id 17
+             title "Run JCL"
+             .
+          03 screen-1-pb-7 Push-Button
+             exception-value 27
+             line 50.2
+             column 65.5
+             size 10.4 cells 
+             lines 2.9 cells 
+             id 18
+             title "Exit"
+             .
+          03 screen-1-la-6 Label
+             line 59.1
+             column 29.9
+             size 10.1 cells 
+             lines 2.5 cells 
+             id 19
+             title "End status"
+             .
+          03 screen-1-pb-8 Push-Button
+             line 3.4
+             column 24.5
+             size 44.5 cells 
+             lines 4.6 cells 
+             id 21
+             title "BJ LAUNCHER"
+             .
+          03 screen-1-la-8 Label
+             line 15.5
+             column 2.4
+             size 20.0 cells 
+             lines 3.4 cells 
+             id 22
+             title "Select JCL folder"
+             .
+          03 screen-1-ef-6 Entry-Field
+             line 14.8
+             column 26.8
+             size 48.8 cells 
+             lines 3.0 cells 
+             id 23
+             3-d
+             read-only
+             value screen-1-ef-6-val
+             .
+          03 screen-1-ef-7 Entry-Field
+             line 59.1
+             column 40.4
+             size 38.7 cells 
+             lines 2.5 cells 
+             id 20
+             3-d
+             read-only
+             value screen-1-ef-7-val
+             .

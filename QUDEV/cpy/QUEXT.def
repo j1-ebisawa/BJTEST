@@ -1,0 +1,7 @@
+      *  Ver test —p EXTERNAL
+       01  QUEXT   EXTERNAL.
+           03  QU-KERNEL             PIC X(20).
+           03  QU-WS2-32             PIC X(20).
+           03  QU-T-KERNEL           PIC X(30).
+           03  QU-T-WS2-32           PIC X(30).
+           03  QU-DISP-H             PIC X(20).

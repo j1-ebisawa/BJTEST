@@ -1,0 +1,13 @@
+           identification division.
+           program-id. JCL10020010283.
+           file-control.
+           data division.
+           WORKING-STORAGE SECTION.
+           01  wk-sysin        PIC X(80).
+           01  PARAM-REC       PIC X(200).
+           procedure division.
+           comp-proc.
+                CALL "AJ_PARAG" USING PARAM-REC.
+                MOVE PARAM-REC TO wk-sysin.
+                CALL "AJ_DSPER" USING wk-sysin.
+

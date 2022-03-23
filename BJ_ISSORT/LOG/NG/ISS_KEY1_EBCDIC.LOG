@@ -1,0 +1,13 @@
+BJ_JCL_001 *** BJ_JCL 開始  ***:(jcl\ISS_KEY1_EBCDIC.jcl)
+BJ_JCL_007 00007:\BJ_SORT E
+BJ_JCL_004 STEP=000001----22年03月16日 : 10時05分44.48秒     開始
+issort Command statement error
+BJ_FUTIL_002 FUTIL異常終了
+BJ_JCL_005 ---------------22年03月16日 : 10時05分45.80秒 正常終了 [00:00:01.32]
+BJ_JCL_007 00013:\QU_FCOMP
+BJ_JCL_004 STEP=000002----22年03月16日 : 10時05分45.85秒     開始
+F1-file-ERROR : 35 data\OUTFL\ISS_KEY1_EBCDIC
+BJ_JCL_005 ---------------22年03月16日 : 10時05分46.05秒 異常終了 [00:00:00.20]
+BJ_JCL_002 *** BJ_JCL 終了  ***
+BJ_JCL_006 ***** 開始時間   22年03月16日 : 10時05分44.20秒
+BJ_JCL_006 ***** 終了時間   22年03月16日 : 10時05分46.07秒        [00:00:01.87]
