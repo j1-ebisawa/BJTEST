@@ -1,0 +1,8 @@
+データファイルを整理する必要あり。
+可変長SEQをREADできない。
+OF=(FID=F1,FN=%OTDATA%MVS_OUTFIL_001,RECL=41)
+
+
+R$IOでレコード長がPlus 1されていない。
+
+
