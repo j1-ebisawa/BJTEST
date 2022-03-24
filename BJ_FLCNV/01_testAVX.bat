@@ -1,3 +1,4 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runJcl AVX_OUT_001
 call 00_runJcl AVX_SEL_AND_AND
 call 00_runJcl AVX_SEL_AND_OR

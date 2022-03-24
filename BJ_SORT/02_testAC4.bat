@@ -1,3 +1,4 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runJcl AC4_KEY1_B2
 call 00_runJcl AC4_KEY1_B4
 call 00_runJcl AC4_KEY1_C

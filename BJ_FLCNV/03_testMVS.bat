@@ -1,3 +1,4 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runJcl MVS_FORMAT_CH
 call 00_runJcl MVS_FORMAT_PD
 call 00_runJcl MVS_FORMAT_ZD

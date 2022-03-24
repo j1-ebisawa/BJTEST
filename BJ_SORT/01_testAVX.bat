@@ -1,3 +1,4 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runJcl AVX_KEY1_C
 call 00_runJcl AVX_KEY1_K
 call 00_runJcl AVX_KEY1_N

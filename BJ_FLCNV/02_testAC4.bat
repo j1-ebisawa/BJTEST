@@ -1,3 +1,4 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runJcl AC4_ARRANGE_CHAR
 call 00_runJcl AC4_ARRANGE_FBIN
 call 00_runJcl AC4_ARRANGE_HEX
