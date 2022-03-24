@@ -1,3 +1,4 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runJCL ISS_INC_KEY1_DSC
 call 00_runJCL ISS_INC_KEY1_OR
 call 00_runJCL ISS_KEY1_ASCII

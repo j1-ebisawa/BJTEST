@@ -1,7 +1,8 @@
 BJ_LICENSE_DIR         ..\BJTOOL_IS\data\jisam
 
+BJ_TOOL_LANG  E
 QU_USER_ID    Juichi
-QU_STATION_ID DELL1195
+QU_STATION_ID HP-pav
 BJ_LAUNCH_EDITOR       c:\tools\sakura\sakura.exe
 
 BJ_JCL_CONFIRM         ALWAYSNO
