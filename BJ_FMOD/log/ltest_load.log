@@ -1,9 +1,0 @@
-BJ_JCL_001 *** BJ_JCL Start ***:(jcl\ltest_load.jcl)
-BJ_JCL_007 00002:>STEP00A1
-BJ_JCL_007 00007:\BJ_FLCNV
-BJ_JCL_004 STEP=000001----------22/03/24 : 11:27:34.82          Start
-BJ_FUTIL_001 FUTIL normal finish.
-BJ_JCL_005 ---------------------22/03/24 : 11:27:35.51   Normal End [00:00:00.69]
-BJ_JCL_002 *** BJ_JCL End   ***
-BJ_JCL_006 ***** Started at 22/03/24        : 11:27:34.20
-BJ_JCL_006 ***** Ended   at 22/03/24        : 11:27:35.60           [00:00:01.40]
