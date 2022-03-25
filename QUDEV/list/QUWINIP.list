@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\Github\BJTEST\QUDEV\source\QUWINIP.cbl
-*>date generated  :  Wed Mar 23 10:56:46 GMT+09:00 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>source file name:  C:\BJTEST\QUDEV\source\QUWINIP.cbl
+*>date generated  :  Fri Mar 25 14:10:10 JST 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
 *>*****************************************************************
 IDENTIFICATION              DIVISION.                            
 *>*****************************************************************
@@ -25,7 +25,7 @@ WORKING-STORAGE             SECTION.
 01  FUNC-NAME               PIC X(30).                           
 01  myptr                   PROCEDURE-POINTER.                   
 *>    COPY "QUEXT.def".                                            
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUEXT.def
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUEXT.def
 *>  Ver test —p EXTERNAL                                           
 01  QUEXT   EXTERNAL.                                            
     03  QU-KERNEL             PIC X(20).                         
@@ -33,7 +33,7 @@ WORKING-STORAGE             SECTION.
     03  QU-T-KERNEL           PIC X(30).                         
     03  QU-T-WS2-32           PIC X(30).                         
     03  QU-DISP-H             PIC X(20).                         
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUEXT.def
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUEXT.def
 LINKAGE                     SECTION.                             
 01  HOSTNAME        PIC X(20).                                   
 01  IP-ADR          PIC X(16).                                   

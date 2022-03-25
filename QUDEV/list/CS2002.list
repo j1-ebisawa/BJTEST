@@ -1,15 +1,15 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\Github\BJTEST\QUDEV\source\CS2002.CBL
-*>date generated  :  Wed Mar 23 10:56:33 GMT+09:00 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>source file name:  C:\BJTEST\QUDEV\source\CS2002.CBL
+*>date generated  :  Fri Mar 25 10:31:17 JST 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
 IDENTIFICATION DIVISION.                                         
     PROGRAM-ID. CS2002.                                          
 CONFIGURATION SECTION.                                           
 DATA DIVISION.                                                   
 WORKING-STORAGE SECTION.                                         
 *>COPY "codeset_2002.cpy". *>for HITACHI EBCDIC                
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\codeset_2002.cpy
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\codeset_2002.cpy
 01 Var-Cset.                                                     
    02 Cset-EBCDIC-ASCII.                                         
       03  FILLER PIC X(16)                                       
@@ -89,7 +89,7 @@ WORKING-STORAGE SECTION.
    02  Current-Position            PIC 9(9) COMP-5.              
    02  Char-Value                  PIC 9(2) COMP-X.              
 *>                                                                 
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\codeset_2002.cpy
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\codeset_2002.cpy
                                                                  
 01 Func-No                  pic x comp-x value 0.                
 01 tmp-byte                 pic x.                               

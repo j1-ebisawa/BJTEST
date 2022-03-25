@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\Github\BJTEST\QUDEV\source\QUTESTID.cbl
-*>date generated  :  Wed Mar 23 10:56:45 GMT+09:00 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>source file name:  C:\BJTEST\QUDEV\source\QUTESTID.cbl
+*>date generated  :  Fri Mar 25 10:31:19 JST 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
 IDENTIFICATION                  DIVISION.                        
 PROGRAM-ID. QUTESTID.                        
 ENVIRONMENT                     DIVISION.                        
@@ -11,18 +11,18 @@ SPECIAL-NAMES.
 INPUT-OUTPUT                    SECTION.                         
 FILE-CONTROL.                                                    
 *>COPY "QUTESTF.sl".                                               
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.sl
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.sl
 SELECT QUTESTF                                                   
     ASSIGN       TO  "data\QUTESTF"                              
     ORGANIZATION IS INDEXED                                      
     ACCESS MODE  IS DYNAMIC                                      
     FILE STATUS  IS FILE-STS                                     
     RECORD KEY   IS QU-KEY1.                                     
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.sl
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.sl
 DATA                            DIVISION.                        
 FILE                            SECTION.                         
 *>COPY "QUTESTF.fd".                                               
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.fd
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.fd
 FD  QUTESTF.                                                     
 01 QU-REC.                                                       
     03 QU-KEY1.                                                  
@@ -57,10 +57,10 @@ FD  QUTESTF.
     03 QU-SSH-CONNECT   PIC  X(60).                              
     03 QU-LANG          PIC  X(20).                              
     03 QU-PWD           PIC  X(50).                              
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.fd
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.fd
 WORKING-STORAGE                 SECTION.                         
 *>COPY "QUTESTID.wrk".                                             
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.wrk
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUTESTID.wrk
 *> QUTESTID.wrk                                                    
 *> user-defined variable                                           
 01 FILE-STS         PIC  X(02).                                  
@@ -97,9 +97,9 @@ WORKING-STORAGE                 SECTION.
     88 START-INV VALUE IS "1". *>START INVALID              
     88 START-NOT-INV VALUE IS "2". *>START NOT INVALID          
 01  WRK-PTR         USAGE POINTER.                               
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.wrk
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUTESTID.wrk
 *>copy "SYSTEMINFO.DEF".                                           
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
 *>************************************
  01  system-information. 
     03  operating-system                         pic x(10). 
@@ -146,7 +146,7 @@ WORKING-STORAGE                 SECTION.
 78  MAGENTA                             VALUE 6. *>6.
 78  BROWN                               VALUE 7. *>7.
 78  WHITE                               VALUE 8. *>8.
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
 78  MB-YES                              VALUE 1.                 
 78  MB-NO                               VALUE 2.                 
 78  MB-CANCEL                           VALUE 3.                 
@@ -155,7 +155,7 @@ WORKING-STORAGE                 SECTION.
 01  WK-I              PIC S9(02) COMP.                           
 LINKAGE                         SECTION.                         
 *>COPY "QUTESTID.lks".                                             
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUTESTID.lks
 *>>                                                                
 01 QUL-PROC-ID      PIC  X(03). *>INT,WRT,TRM                   
 *>>                                                                
@@ -166,7 +166,7 @@ LINKAGE                         SECTION.
 01 QUL-COMM1        PIC  X(40).                                  
 *>>                                                                
 01 QUL-RETURNCD     PIC  S9(05). *>OK:0, 1-99:warning, 100-:erro
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUTESTID.lks
 PROCEDURE DIVISION  USING QUL-PROC-ID QUL-PARAM-ID QUL-RES       
                           QUL-COMM1 QUL-RETURNCD.                
 MAIN-ROUTINE.                                                    

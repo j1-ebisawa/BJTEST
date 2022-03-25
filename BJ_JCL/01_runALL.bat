@@ -1,3 +1,4 @@
+set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runjcl CALL_ARG_001
 call 00_runjcl CALL_ARG_002
 call 00_runjcl CALL_ARG_003

@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\Github\BJTEST\QUDEV\source\mk_CATLG.cbl
-*>date generated  :  Wed Mar 23 10:56:51 GMT+09:00 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>source file name:  C:\BJTEST\QUDEV\source\mk_CATLG.cbl
+*>date generated  :  Fri Mar 25 10:31:22 JST 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
 IDENTIFICATION         DIVISION.                                 
 PROGRAM-ID. mk_CATLG.                                 
 ENVIRONMENT            DIVISION.                                 
@@ -16,28 +16,28 @@ SELECT INTXT           ASSIGN TO INTXT-NAME
        ACCESS MODE     SEQUENTIAL                                
        FILE STATUS     INTXT-STS.                                
 *>COPY "BJ_CATLG_SL.CPY".                                          
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_CATLG_SL.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_CATLG_SL.CPY
     SELECT      CATLG-F  ASSIGN  TO dynamic  CATLG-FNAME         
                 ORGANIZATION          IS INDEXED                 
                 RECORD KEY            IS CATLG-PKEY              
                 ACCESS      MODE      IS RANDOM                  
                 LOCK MODE   AUTOMATIC                            
                 FILE        STATUS    F-STS.                     
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_CATLG_SL.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_CATLG_SL.CPY
 DATA                   DIVISION.                                 
 FILE SECTION.                                                    
 FD    INTXT.                                                     
 01    INTXT-REC        PIC X(200).                               
 *>COPY "BJ_CATLG_FD.CPY".                                          
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_CATLG_FD.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_CATLG_FD.CPY
 FD  CATLG-F.                                                     
 01  CATLG-REC.                                                   
     05  CATLG-MIN-RECL            PIC 9(6).                      
     05  CATLG-MAX-RECL            PIC 9(6).                      
+    05  CATLG-FORG                PIC X.                         
     05  CATLG-PKEY.                                              
-      10  CATLG-FORG              PIC X.                         
       10  CATLG-FPATH             PIC X(128).                    
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_CATLG_FD.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_CATLG_FD.CPY
 WORKING-STORAGE SECTION.                                         
 01  W-X.                                                         
     05  W-CNT          PIC 9(5).                                 

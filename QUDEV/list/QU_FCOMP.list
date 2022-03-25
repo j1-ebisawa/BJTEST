@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\Github\BJTEST\QUDEV\source\QU_FCOMP.cbl
-*>date generated  :  Wed Mar 23 10:56:46 GMT+09:00 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>source file name:  C:\BJTEST\QUDEV\source\QU_FCOMP.cbl
+*>date generated  :  Fri Mar 25 10:31:20 JST 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
 identification division. 
 program-id. QU_FCOMP. 
 environment              division. 
@@ -12,7 +12,7 @@ data                     division.
 >>PAGE 
 working-storage          section. 
 *>copy "BJ_fc78.cpy". 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FC78.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FC78.CPY
 *>--  AcuTECH Japan File Utility  --------------------------------------*
 *>       Constant define area                                           *
 *>----------------------------------------------------------------------*
@@ -72,10 +72,10 @@ working-storage          section.
  78  bjf-condition-ne           value  5. 
 
 *>--  End of Constant define area  -------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FC78.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FC78.CPY
 
 *>copy "BJ_finfo.cpy" replacing =='BJf'== by ==bjf-f1==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>--  isTECH Japan File Utility   --------------------------------------*
 *>       File information area                                          *
 *>--------------------------------------------------------  22.03.03  --*
@@ -97,9 +97,9 @@ working-storage          section.
      03 BJF-F1-index-file-handle         handle.  
 
 *>--  End of File information area  ------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>copy "BJ_finfo.cpy" replacing =='BJf'== by ==bjf-f2==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>--  isTECH Japan File Utility   --------------------------------------*
 *>       File information area                                          *
 *>--------------------------------------------------------  22.03.03  --*
@@ -121,9 +121,9 @@ working-storage          section.
      03 BJF-F2-index-file-handle         handle.  
 
 *>--  End of File information area  ------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>copy "BJ_frec.cpy"  replacing =='BJf'== by ==bjf-f1==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FREC.CPY
 *>--   isTECH Japan File Utility  --------------------------------------*
 *>       Record information area                                        *
 *>--------------------------------------------------------  22.03.03  --*
@@ -133,9 +133,9 @@ working-storage          section.
 
 *>--  End of Record information area  ----------------------------------*
 
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FREC.CPY
 *>copy "BJ_frec.cpy"  replacing =='BJf'== by ==bjf-f2==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FREC.CPY
 *>--   isTECH Japan File Utility  --------------------------------------*
 *>       Record information area                                        *
 *>--------------------------------------------------------  22.03.03  --*
@@ -145,14 +145,14 @@ working-storage          section.
 
 *>--  End of Record information area  ----------------------------------*
 
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FREC.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FREC.CPY
  01  bjf-f1-file-handle              pointer. 
  01  bjf-f2-file-handle              pointer. 
  01  bjf-f1-record-ptr               pointer. 
  01  bjf-f2-record-ptr               pointer. 
  01  bjf-io-function                 pic 9(02) comp-x. 
 *>copy "QUTESTID.lks". 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUTESTID.lks
 *>>                                                                
 01 QUL-PROC-ID      PIC  X(03). *>INT,WRT,TRM                   
 *>>                                                                
@@ -163,7 +163,7 @@ working-storage          section.
 01 QUL-COMM1        PIC  X(40).                                  
 *>>                                                                
 01 QUL-RETURNCD     PIC  S9(05). *>OK:0, 1-99:warning, 100-:erro
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTID.lks
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUTESTID.lks
 *>******** WORK-DATA **********
 01  check-result             pic X(5). 
 01  f1-cnt                   pic 9(10). 
@@ -181,7 +181,7 @@ working-storage          section.
  01    FL--TEXT     PIC X(80).     
 LINKAGE SECTION. 
 *>copy "BJ_finfo.cpy" replacing =='BJf'== by ==bjf-wk==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>--  isTECH Japan File Utility   --------------------------------------*
 *>       File information area                                          *
 *>--------------------------------------------------------  22.03.03  --*
@@ -203,7 +203,7 @@ LINKAGE SECTION.
      03 BJF-WK-index-file-handle         handle.  
 
 *>--  End of File information area  ------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 >>PAGE 
 procedure  division. 
 prog-start. 

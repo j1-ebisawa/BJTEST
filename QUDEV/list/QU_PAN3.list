@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\Github\BJTEST\QUDEV\source\QU_PAN3.cbl
-*>date generated  :  Wed Mar 23 10:56:47 GMT+09:00 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>source file name:  C:\BJTEST\QUDEV\source\QU_PAN3.cbl
+*>date generated  :  Fri Mar 25 10:31:20 JST 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
 identification division. 
 program-id. UQ_PANAL. 
 environment              division. 
@@ -24,7 +24,7 @@ fd  param-file.
 *>*******************************************************************************
 working-storage              section. 
 *>copy "SYSTEMINFO.DEF". 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
 *>************************************
  01  system-information. 
     03  operating-system                         pic x(10). 
@@ -71,9 +71,9 @@ working-storage              section.
 78  MAGENTA                             VALUE 6. *>6.
 78  BROWN                               VALUE 7. *>7.
 78  WHITE                               VALUE 8. *>8.
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\SYSTEMINFO.DEF
 *>copy "BJ_FC78.CPY". 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FC78.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FC78.CPY
 *>--  AcuTECH Japan File Utility  --------------------------------------*
 *>       Constant define area                                           *
 *>----------------------------------------------------------------------*
@@ -133,7 +133,7 @@ working-storage              section.
  78  bjf-condition-ne           value  5. 
 
 *>--  End of Constant define area  -------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FC78.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FC78.CPY
 01  WK-BATCH-CONV            PIC X VALUE "Y". 
     88 BATCH-MODE                  VALUE "Y". 
     88 CONV-MODE                   VALUE " ". 
@@ -220,7 +220,7 @@ working-storage              section.
  01    WK-AJ-DEBUG     PIC X.   
 linkage section. 
 *>    copy "BJ_FINFO.CPY" replacing =='BJf'== by ==bjf-f1==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>--  isTECH Japan File Utility   --------------------------------------*
 *>       File information area                                          *
 *>--------------------------------------------------------  22.03.03  --*
@@ -242,9 +242,9 @@ linkage section.
      03 BJF-F1-index-file-handle         handle.  
 
 *>--  End of File information area  ------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>    copy "BJ_FINFO.CPY" replacing =='BJf'== by ==bjf-f2==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>--  isTECH Japan File Utility   --------------------------------------*
 *>       File information area                                          *
 *>--------------------------------------------------------  22.03.03  --*
@@ -266,10 +266,10 @@ linkage section.
      03 BJF-F2-index-file-handle         handle.  
 
 *>--  End of File information area  ------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>
 *>    copy "BJ_FINFO.CPY" replacing =='BJf'== by ==bjf-fn==. 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 *>--  isTECH Japan File Utility   --------------------------------------*
 *>       File information area                                          *
 *>--------------------------------------------------------  22.03.03  --*
@@ -291,7 +291,7 @@ linkage section.
      03 BJF-FN-index-file-handle         handle.  
 
 *>--  End of File information area  ------------------------------------*
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\BJ_FINFO.CPY
 
 >>PAGE 
 procedure  division  using     bjf-f1-file-info

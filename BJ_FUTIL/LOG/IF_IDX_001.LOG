@@ -1,52 +1,52 @@
-BJ_JCL_001 *** BJ_JCL Start ***:(jcl\IF_IDX_001.jcl)
+BJ_JCL_001 *** BJ_JCL 開始  ***:(jcl\IF_IDX_001.jcl)
 BJ_JCL_007 00005:\BJ_FLCNV
-BJ_JCL_004 STEP=000001----------22/03/24 : 11:24:15.45          Start
-BJ_FUTIL_004 FUTIL input file:data\INFILE\FIDX_10
-BJ_FUTIL_005 FUTIL input record count:0000000011
-BJ_FUTIL_006 FUTIL output file:data\OUTFL\IF_IDX_001I
-BJ_FUTIL_007 FUTIL output record count:0000000011
-BJ_FUTIL_001 FUTIL normal finish.
-BJ_JCL_005 ---------------------22/03/24 : 11:24:16.18   Normal End [00:00:00.73]
+BJ_JCL_004 STEP=000001----22年03月17日 : 10時08分48.22秒     開始
+BJ_FUTIL_004 FUTIL入力ファイル：data\INFILE\FIDX_10
+BJ_FUTIL_005 FUTIL入力件数： 0000000011
+BJ_FUTIL_006 FUTIL出力ファイル：data\OUTFL\IF_IDX_001I
+BJ_FUTIL_007 FUTIL出力件数： 0000000011
+BJ_FUTIL_001 FUTIL正常終了
+BJ_JCL_005 ---------------22年03月17日 : 10時08分49.39秒 正常終了 [00:00:01.17]
 BJ_JCL_007 00010:\BJ_FLCNV
-BJ_JCL_004 STEP=000002----------22/03/24 : 11:24:16.28          Start
-BJ_FUTIL_004 FUTIL input file:data\INFILE\FIDX_10
-BJ_FUTIL_005 FUTIL input record count:0000000011
-BJ_FUTIL_006 FUTIL output file:data\OUTFL\IF_IDX_001R
-BJ_FUTIL_007 FUTIL output record count:0000000011
-BJ_FUTIL_001 FUTIL normal finish.
-BJ_JCL_005 ---------------------22/03/24 : 11:24:16.51   Normal End [00:00:00.23]
+BJ_JCL_004 STEP=000002----22年03月17日 : 10時08分49.44秒     開始
+BJ_FUTIL_004 FUTIL入力ファイル：data\INFILE\FIDX_10
+BJ_FUTIL_005 FUTIL入力件数： 0000000011
+BJ_FUTIL_006 FUTIL出力ファイル：data\OUTFL\IF_IDX_001R
+BJ_FUTIL_007 FUTIL出力件数： 0000000011
+BJ_FUTIL_001 FUTIL正常終了
+BJ_JCL_005 ---------------22年03月17日 : 10時08分49.59秒 正常終了 [00:00:00.15]
 BJ_JCL_007 00015:\BJ_FLCNV
-BJ_JCL_004 STEP=000003----------22/03/24 : 11:24:16.54          Start
-BJ_FUTIL_004 FUTIL input file:data\INFILE\FIDX_10
-BJ_FUTIL_005 FUTIL input record count:0000000011
-BJ_FUTIL_006 FUTIL output file:data\OUTFL\IF_IDX_001S
-BJ_FUTIL_007 FUTIL output record count:0000000011
-BJ_FUTIL_001 FUTIL normal finish.
-BJ_JCL_005 ---------------------22/03/24 : 11:24:16.75   Normal End [00:00:00.21]
+BJ_JCL_004 STEP=000003----22年03月17日 : 10時08分49.59秒     開始
+BJ_FUTIL_004 FUTIL入力ファイル：data\INFILE\FIDX_10
+BJ_FUTIL_005 FUTIL入力件数： 0000000011
+BJ_FUTIL_006 FUTIL出力ファイル：data\OUTFL\IF_IDX_001S
+BJ_FUTIL_007 FUTIL出力件数： 0000000011
+BJ_FUTIL_001 FUTIL正常終了
+BJ_JCL_005 ---------------22年03月17日 : 10時08分49.70秒 正常終了 [00:00:00.11]
 BJ_JCL_007 00020:\BJ_FLCNV
-BJ_JCL_004 STEP=000004----------22/03/24 : 11:24:16.76          Start
-BJ_FUTIL_004 FUTIL input file:data\INFILE\FIDX_10
-BJ_FUTIL_005 FUTIL input record count:0000000011
-BJ_FUTIL_006 FUTIL output file:data\OUTFL\IF_IDX_001T
-BJ_FUTIL_007 FUTIL output record count:0000000011
-BJ_FUTIL_001 FUTIL normal finish.
-BJ_JCL_005 ---------------------22/03/24 : 11:24:16.98   Normal End [00:00:00.22]
+BJ_JCL_004 STEP=000004----22年03月17日 : 10時08分49.72秒     開始
+BJ_FUTIL_004 FUTIL入力ファイル：data\INFILE\FIDX_10
+BJ_FUTIL_005 FUTIL入力件数： 0000000011
+BJ_FUTIL_006 FUTIL出力ファイル：data\OUTFL\IF_IDX_001T
+BJ_FUTIL_007 FUTIL出力件数： 0000000011
+BJ_FUTIL_001 FUTIL正常終了
+BJ_JCL_005 ---------------22年03月17日 : 10時08分49.81秒 正常終了 [00:00:00.09]
 BJ_JCL_007 00026:\QU_FCOMP
-BJ_JCL_004 STEP=000005----------22/03/24 : 11:24:17.01          Start
+BJ_JCL_004 STEP=000005----22年03月17日 : 10時08分49.81秒     開始
 QU_FCOMP : OK!!
-BJ_JCL_005 ---------------------22/03/24 : 11:24:17.65   Normal End [00:00:00.64]
+BJ_JCL_005 ---------------22年03月17日 : 10時08分50.22秒 正常終了 [00:00:00.41]
 BJ_JCL_007 00030:\QUCOMP
-BJ_JCL_004 STEP=000006----------22/03/24 : 11:24:17.65          Start
+BJ_JCL_004 STEP=000006----22年03月17日 : 10時08分50.23秒     開始
 OK!!!
-BJ_JCL_005 ---------------------22/03/24 : 11:24:17.83   Normal End [00:00:00.18]
+BJ_JCL_005 ---------------22年03月17日 : 10時08分50.30秒 正常終了 [00:00:00.07]
 BJ_JCL_007 00034:\QUCOMP
-BJ_JCL_004 STEP=000007----------22/03/24 : 11:24:17.83          Start
+BJ_JCL_004 STEP=000007----22年03月17日 : 10時08分50.30秒     開始
 OK!!!
-BJ_JCL_005 ---------------------22/03/24 : 11:24:17.87   Normal End [00:00:00.04]
+BJ_JCL_005 ---------------22年03月17日 : 10時08分50.31秒 正常終了 [00:00:00.01]
 BJ_JCL_007 00038:\QUCOMP
-BJ_JCL_004 STEP=000008----------22/03/24 : 11:24:17.87          Start
+BJ_JCL_004 STEP=000008----22年03月17日 : 10時08分50.31秒     開始
 OK!!!
-BJ_JCL_005 ---------------------22/03/24 : 11:24:17.92   Normal End [00:00:00.05]
-BJ_JCL_002 *** BJ_JCL End   ***
-BJ_JCL_006 ***** Started at 22/03/24        : 11:24:14.78
-BJ_JCL_006 ***** Ended   at 22/03/24        : 11:24:17.92           [00:00:03.14]
+BJ_JCL_005 ---------------22年03月17日 : 10時08分50.33秒 正常終了 [00:00:00.02]
+BJ_JCL_002 *** BJ_JCL 終了  ***
+BJ_JCL_006 ***** 開始時間   22年03月17日 : 10時08分47.74秒
+BJ_JCL_006 ***** 終了時間   22年03月17日 : 10時08分50.33秒        [00:00:02.59]

@@ -1,4 +1,3 @@
-set CLASSPATH=%CLASSPATH%;../BJTOOL_IS/jar/bjtool.jar
 call 00_runJcl FUTIL_CRE_001
 call 00_runJcl IF_IDX_001
 call 00_runJcl IF_REL_001

@@ -1,8 +1,8 @@
 *>(c) 2005 - 2021 Veryant
 *>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\Github\BJTEST\QUDEV\source\test_RIO.cbl
-*>date generated  :  Wed Mar 23 10:56:56 GMT+09:00 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
+*>source file name:  C:\BJTEST\QUDEV\source\test_RIO.cbl
+*>date generated  :  Fri Mar 25 14:10:07 JST 2022
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
 *>*********
 IDENTIFICATION DIVISION. 
     PROGRAM-ID. test_RIO. 
@@ -11,7 +11,7 @@ CONFIGURATION SECTION.
 DATA DIVISION. 
 WORKING-STORAGE SECTION. 
 *> copy "isfilesys.def". 
-*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\isfilesys.def
+*>vvv-> file: C:\BJTEST\QUDEV\cpy\isfilesys.def
 *>>********************************************************************<*
 *>>***** Copyright (c) 2005 - 2022 Veryant. Users of isCOBOL      *****<*
 *>>***** may freely modify and redistribute this program.         *****<*
@@ -231,7 +231,7 @@ WORKING-STORAGE SECTION.
 78  fa-remote                                    value 2. 
 
 *>       >>SOURCE FORMAT PREVIOUS
-*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\isfilesys.def
+*>^^^-> file: C:\BJTEST\QUDEV\cpy\isfilesys.def
  
  77  f                       handle . 
  77  file-io                 pic x(128). 
