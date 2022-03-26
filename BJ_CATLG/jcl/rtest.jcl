@@ -1,4 +1,4 @@
 \step RTEST
-@file RTEST FN=data\RTEST
+@file RTEST FN=%OTDATA%RTEST
 \exec
 @end

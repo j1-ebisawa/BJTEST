@@ -7,6 +7,8 @@
 000030000030Sdata\OUTFL\CGET_OF_SEQ                                                                                                          
 000010000010Tdata\OUTFL\CGET_OF_TXT                                                                                                          
 000010000010Rdata\OUTFL\CGET_OF_REL                                                                                                          
-000050000050Tdata\OUTFL\CATLG-MAST-PRT.txt                                                                                                   
-000050000050Tdata\OUTFL\CATLG-TMP-PRT.txt                                                                                                    
-000040000040Rdata\RTEST                                                                                                                      
+000040000040Rdata\OUTFL\RTEST                                                                                                                
+000010000010Rdata\OUTFL\CSET_OF_REL                                                                                                          
+000030000030Sdata\OUTFL\TEMP_SEQ                                                                                                             
+000030000030Sdata\OUTFL\CSET_OF_SEQ                                                                                                          
+000041000041Tdata\OUTFL\CSET_OF_SEQ.prt                                                                                                      
