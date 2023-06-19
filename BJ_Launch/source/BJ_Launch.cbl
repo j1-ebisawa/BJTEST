@@ -2,7 +2,7 @@
       *end {iscobol}compiler-directives
       *begin {iscobol}prog-comment
       *BJ_Launch.cbl
-      *BJ_Launch.cbl is generated from C:\BJTEST\BJ_Launch\screen\BJ_Launch.isp
+      *BJ_Launch.cbl is generated from C:\Github\BJTEST\BJ_Launch\screen\BJ_Launch.isp
       *end {iscobol}prog-comment
        identification division.
       *begin {iscobol}progid
