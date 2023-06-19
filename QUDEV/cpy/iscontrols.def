@@ -131,6 +131,8 @@
 78  pbp-rollover-background-color                value 4101.
 78  pbp-rollover-foreground-color                value 4102.
 78  pbp-transparent-color                        value 4103.
+78  pbp-rollover-border-color                    value 4104.
+78  pbp-bitmap-scale                             value 4105.
 
 78  cbs-transparent                              value 65536.
 78  cbs-bitmap                                   value 32768.
@@ -157,6 +159,7 @@
 78  cbp-rollover-color                           value 4100.
 78  cbp-rollover-background-color                value 4101.
 78  cbp-rollover-foreground-color                value 4102.
+78  cbp-bitmap-scale                             value 4103.
 
 78  rbs-no-group-tab                             value 1.
 78  rbs-left-text                                value 2.
@@ -186,6 +189,7 @@
 78  rbp-rollover-color                           value 4100.
 78  rbp-rollover-background-color                value 4101.
 78  rbp-rollover-foreground-color                value 4102.
+78  rbp-bitmap-scale                             value 4103.
 
 78  sbs-horizontal                               value 1.
 78  sbs-track-thumb                              value 2.
@@ -193,6 +197,13 @@
 78  sbp-min-val                                  value 1.
 78  sbp-max-val                                  value 2.
 78  sbp-page-size                                value 3.
+
+78  slp-min-val                                  value 1.
+78  slp-max-val                                  value 2.
+78  slp-page-size                                value 3.
+78  slp-major-tick-spacing                       value 4.
+78  slp-minor-tick-spacing                       value 5.
+78  slp-labels-increment                         value 6.
 
 78  lbs-unsorted                                 value 1.
 78  lbs-no-box                                   value 2.
@@ -230,6 +241,7 @@
 78  lbp-action                                   value 4115.
 78  lbp-export-file-name                         value 4116.
 78  lbp-export-file-format                       value 4117.
+78  lbp-export-file-open                         value 4123.
 
 78  cms-unsorted                                 value 1.
 78  cms-drop-down                                value 0.
@@ -273,6 +285,8 @@
 78  fp-gradient-orientation                      value 4097.
 78  fp-gradient-color-1                          value 4098.
 78  fp-gradient-color-2                          value 4099.
+78  fp-background-bitmap-handle                  value 4100.
+78  fp-background-bitmap-scale                   value 4101.
 
 78  ts-multiline                                 value 1.
 78  ts-buttons                                   value 2.
@@ -311,6 +325,8 @@
 78  tp-gradient-orientation                      value 4113.
 78  tp-gradient-color-1                          value 4114.
 78  tp-gradient-color-2                          value 4115.
+78  tp-background-bitmap-handle                  value 4116.
+78  tp-background-bitmap-scale                   value 4117.
 
 78  brs-dotted                                   value 1.
 78  brs-dashed                                   value 2.
@@ -329,6 +345,8 @@
 78  btp-bitmap-end                               value 4.
 78  btp-bitmap-timer                             value 5.
 78  btp-bitmap-transparent-color                 value 6.
+78  btp-bitmap-scale                             value 7.
+78  btp-bitmap-width                             value 8.
 
 78  grs-boxed                                    value 1.
 78  grs-no-box                                   value 2.
@@ -428,6 +446,7 @@
 78  grp-sort-types                               value 4130.
 78  grp-filter-types                             value 4131.
 78  grp-last-row-view                            value 4132.
+78  grp-export-file-open                         value 4133.
 
 78  tvs-boxed                                    value 1.
 78  tvs-no-box                                   value 2.
@@ -476,6 +495,13 @@
 78  tvp-alignment                                value 4120.
 78  tvp-selection-mode                           value 4121.
 78  tvp-items-selected                           value 4122.
+78  tvp-search-panel                             value 4123.
+78  tvp-gradient-orientation                     value 4124.
+78  tvp-gradient-color-1                         value 4125.
+78  tvp-gradient-color-2                         value 4126.
+78  tvp-background-bitmap-handle                 value 4127.
+78  tvp-background-bitmap-scale                  value 4128.
+78  tvp-record-data                              value 4129.
 
 78  wbs-notify-change                            value 1.
 

@@ -125,6 +125,7 @@
 78  runenv-thin-client                           value 4.
 78  runenv-web-client                            value 5.
 78  runenv-wd2                                   value 6.
+78  runenv-jee                                   value 7.
 78  runenv-j2ee                                  value 7.
 78  runenv-mobile                                value 8.
 78  runenv-thin-call-client                      value 9.

@@ -41,7 +41,7 @@
     03 wbitmap-lsf-element                       occurs dynamic.
        05 wbitmap-lsf-font                       handle of font.
        05 wbitmap-lsf-characters                 pic n any length.
-       05 wbitmap-lsf-color                      pic s9(10).
+       05 wbitmap-lsf-color                      pic s9(18) comp-4.
 
 78  wscale-stretch                               value 0.
 78  wscale-resize-xy                             value 1.

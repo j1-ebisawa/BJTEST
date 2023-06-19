@@ -1,8 +1,7 @@
-*>(c) 2005 - 2021 Veryant
-*>compiler version: isCOBOL-BETA release 2022 R1 build#1060.3-20220127-33211
-*>source file name:  C:\BJTEST\QUDEV\source\QUREPORT.cbl
-*>date generated  :  Fri Mar 25 10:31:19 JST 2022
-*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/BJTEST/QUDEV/output -jj -vx -eo=C:/BJTEST/QUDEV/errs -b -d -g -lo=C:/BJTEST/QUDEV/list -tasks
+*>compiler version: isCOBOL release 2023 R1 build#1090.8-20230316-35930
+*>source file name:  C:\Github\BJTEST\QUDEV\source\QUREPORT.cbl
+*>date generated  :  Mon Jun 19 14:18:33 JST 2023
+*>compiler options:  -dx -cndbcs -sp=cpy;screenpgm;fdsl -esme=100 -smat -ccbas -od=C:/Github/BJTEST/QUDEV/output -jj -vx -eo=C:/Github/BJTEST/QUDEV/errs -b -d -g -lo=C:/Github/BJTEST/QUDEV/list -tasks
 IDENTIFICATION                  DIVISION.                        
 PROGRAM-ID. QUREPORT.                        
 ENVIRONMENT                     DIVISION.                        
@@ -11,14 +10,14 @@ INPUT-OUTPUT                    SECTION.
 FILE-CONTROL.                                                    
 *>COPY "QUTESTF.sl"      replacing QU-KEY1 BY                      
 *>                       == QU-KEY1 OF QUTESTF==.                  
-*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.sl
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.sl
 SELECT QUTESTF                                                   
-    ASSIGN       TO  "data\QUTESTF"                              
+    ASSIGN       TO  "data/QUTESTF"                              
     ORGANIZATION IS INDEXED                                      
     ACCESS MODE  IS DYNAMIC                                      
     FILE STATUS  IS FILE-STS                                     
     RECORD KEY   IS QU-KEY1 OF QUTESTF.                                     
-*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.sl
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.sl
 SELECT PRINT-F         ASSIGN TO dynamic PRINT-FNM               
                        ORGANIZATION LINE SEQUENTIAL              
                        ACCESS MODE       SEQUENTIAL              
@@ -26,7 +25,7 @@ SELECT PRINT-F         ASSIGN TO dynamic PRINT-FNM
 DATA                            DIVISION.                        
 FILE                            SECTION.                         
 *>COPY "QUTESTF.fd".                                               
-*>vvv-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.fd
+*>vvv-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.fd
 FD  QUTESTF.                                                     
 01 QU-REC.                                                       
     03 QU-KEY1.                                                  
@@ -61,7 +60,7 @@ FD  QUTESTF.
     03 QU-SSH-CONNECT   PIC  X(60).                              
     03 QU-LANG          PIC  X(20).                              
     03 QU-PWD           PIC  X(50).                              
-*>^^^-> file: C:\BJTEST\QUDEV\cpy\QUTESTF.fd
+*>^^^-> file: C:\Github\BJTEST\QUDEV\cpy\QUTESTF.fd
 FD    PRINT-F.                                                   
 01    P-REC                     PIC X(256).                      
 WORKING-STORAGE                 SECTION.                         
